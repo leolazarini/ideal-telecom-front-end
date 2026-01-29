@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Chamados - Ideal Telecom</title>
+    
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5', 
+                            default: '#19476B', 
+                            teal: '#0D9DA5', 
+                            orange: '#EB5435', 
+                            yellow: '#F5A62D', 
+                            pink: '#E71552', 
+                            bg: '#F8FAFC', 
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Clientes
+                    </a>
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Contratos
+                    </a>
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Pedidos
+                    </a>
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                    </a>
+                    <div class="pt-4 pb-2">
+                        <p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </nav>
+
+
+                <div class="mt-8">
+                    <h3 class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-spreadsheet" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="bg-white/10 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff" alt="">
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <a href="index.html" class="text-gray-400 hover:text-brand-orange p-1.5 rounded-full transition-colors">
+                        <i data-lucide="log-out" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+            
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <a href="chamados-lista.html" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </a>
+                        <h1 class="text-xl font-semibold text-brand-default">Relatório de Chamados</h1>
+                    </div>
+
+                    
+                    <div class="flex items-center gap-4">
+                        <button class="p-2 text-gray-400 hover:text-brand-default relative">
+                            <i data-lucide="bell" class="h-6 w-6"></i>
+                            <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                <div class="max-w-7xl mx-auto">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Filtrar por Cliente</label>
+                                <select class="w-full border-gray-300 rounded-lg text-sm focus:ring-brand-light">
+                                    <option>Todos os Clientes</option>
+                                    <option>Tech Solutions LTDA</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Prioridade</label>
+                                <select class="w-full border-gray-300 rounded-lg text-sm focus:ring-brand-light">
+                                    <option>Todas</option>
+                                    <option>Baixa</option>
+                                    <option>Normal</option>
+                                    <option>Alta</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Status</label>
+                                <select class="w-full border-gray-300 rounded-lg text-sm focus:ring-brand-light">
+                                    <option>Abertos / Pendentes</option>
+                                    <option>Finalizados</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Data de Abertura</label>
+                                <input type="date" class="w-full border-gray-300 rounded-lg text-sm focus:ring-brand-light">
+                            </div>
+                            
+                            <div class="md:col-span-4 flex justify-end gap-3 pt-2">
+                                <button class="px-5 py-2 bg-brand-default text-white rounded-lg text-sm font-medium hover:bg-brand-light transition-all flex items-center gap-2">
+                                    <i data-lucide="filter" class="h-4 w-4"></i> Filtrar Resultados
+                                </button>
+                                <button class="px-5 py-2 border border-brand-teal text-brand-teal rounded-lg text-sm font-medium hover:bg-brand-teal hover:text-white transition-all flex items-center gap-2">
+                                    <i data-lucide="file-text" class="h-4 w-4"></i> Exportar PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-gray-50 border-b border-gray-200 text-gray-500 uppercase text-[11px] font-bold tracking-wider">
+                                <tr>
+                                    <th class="px-6 py-4">Protocolo</th>
+                                    <th class="px-6 py-4">Cliente</th>
+                                    <th class="px-6 py-4">Assunto</th>
+                                    <th class="px-6 py-4">Data</th>
+                                    <th class="px-6 py-4">Prioridade</th>
+                                    <th class="px-6 py-4">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-brand-default">#202601-08</td>
+                                    <td class="px-6 py-4">Indústria Alfa S.A</td>
+                                    <td class="px-6 py-4 text-gray-600">Lentidão no link principal</td>
+                                    <td class="px-6 py-4">28/01/2026</td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">Alta</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 font-bold border border-blue-200">Aberto</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
+                <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital 
+                    <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

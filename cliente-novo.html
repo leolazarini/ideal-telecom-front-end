@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Cliente - Ideal Telecom</title>
+    
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5', 
+                            default: '#19476B', 
+                            teal: '#0D9DA5', 
+                            orange: '#EB5435', 
+                            yellow: '#F5A62D', 
+                            pink: '#E71552', 
+                            bg: '#F8FAFC', 
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    <a href="clientes-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md border-l-4 border-brand-light">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-brand-light"></i>
+                        Clientes
+                    </a>
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Contratos
+                    </a>
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Pedidos
+                    </a>
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                    </a>
+                <div class="pt-4 pb-2">
+    <p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+</div>
+<a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+    <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+    Usuários
+
+</a>
+                </nav>
+
+
+                <div class="mt-8">
+                    <h3 class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="shopping-bag" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question-mark" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <a href="admin-usuarios.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                            <i data-lucide="settings" class="h-4 w-4"></i>
+                        </a>
+                        <a href="index.html" class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
+                            <i data-lucide="log-out" class="h-4 w-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+            
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <a href="clientes-lista.html" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </a>
+                        <h1 class="text-xl font-semibold text-brand-default">Novo Cliente</h1>
+                    </div>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="h-6 w-px bg-gray-200"></div>
+                        <button class="p-2 text-gray-400 hover:text-brand-default transition-colors relative">
+                            <i data-lucide="bell" class="h-6 w-6"></i>
+                            <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                <div class="max-w-4xl mx-auto">
+                    
+                    <form action="#" class="space-y-6">
+                        
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                                <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                    <i data-lucide="user" class="h-4 w-4"></i>
+                                    Dados do Cliente
+                                </h3>
+                            </div>
+                            
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Razão Social / Nome Completo *</label>
+                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">CPF / CNPJ *</label>
+                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Inscrição Estadual (Opcional)</label>
+                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                                <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                    <i data-lucide="phone" class="h-4 w-4"></i>
+                                    Contato e Endereço
+                                </h3>
+                            </div>
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail Principal *</label>
+                                    <input type="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp *</label>
+                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Endereço de Instalação</label>
+                                    <input type="text" placeholder="Rua, Número, Bairro, Cidade..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-100 flex items-center justify-end gap-3">
+                            <a href="clientes-lista.html" class="px-4 py-2 border border-slate-300 rounded-lg text-slate-700 text-sm font-medium hover:bg-slate-50 transition-colors">Cancelar</a>
+                            <button type="submit" class="px-6 py-2 bg-brand-default hover:bg-brand-light text-white rounded-lg text-sm font-medium shadow-sm transition-all transform hover:-translate-y-0.5">
+                                Salvar Cliente
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
+                <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital 
+                    <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

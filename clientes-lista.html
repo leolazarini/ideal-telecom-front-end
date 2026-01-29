@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes - Ideal Telecom</title>
+    
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5', 
+                            default: '#19476B', 
+                            teal: '#0D9DA5', 
+                            orange: '#EB5435', 
+                            yellow: '#F5A62D', 
+                            pink: '#E71552', 
+                            bg: '#F8FAFC', 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    
+                    <a href="clientes-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md border-l-4 border-brand-light">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-brand-light"></i>
+                        Clientes
+                    </a>
+
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Contratos
+                    </a>
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Pedidos
+                    </a>
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                        <span class="ml-auto bg-brand-orange text-white py-0.5 px-2 rounded-full text-xs">2</span>
+                    </a>
+                    <div class="pt-4 pb-2">
+                        <p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </nav>
+
+
+                <div class="mt-8">
+                    <h3 class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="shopping-bag" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question-mark" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                            <i data-lucide="settings" class="h-4 w-4"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
+                            <i data-lucide="log-out" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+            
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <h1 class="text-xl font-semibold text-brand-default">Gestão de Clientes</h1>
+                    
+                    <div class="flex items-center gap-4">
+                        <div class="hidden md:flex items-center gap-3 mr-4">
+                            <a href="cliente-novo.html" class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-brand-default border border-brand-default rounded-full hover:border-brand-default hover:bg-brand-default hover:text-white transition-colors">
+                                <i data-lucide="user-plus" class="h-4 w-4"></i> Novo Cliente
+                            </a>
+                        </div>
+                        <div class="h-6 w-px bg-gray-200"></div>
+                        <button class="p-2 text-gray-400 hover:text-brand transition-colors relative" title="Notificações">
+                            <i data-lucide="bell" class="h-6 w-6"></i>
+                            <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap gap-4 items-center justify-between shadow-sm z-0">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400"></i>
+                        <input type="text" placeholder="Nome, CNPJ ou Código..." class="pl-9 pr-4 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light w-64 shadow-sm">
+                    </div>
+                    
+                    <div class="h-6 w-px bg-gray-200"></div>
+                    
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-500">Status:</span>
+                        <select class="text-sm border border-gray-300 rounded-lg py-1.5 px-3 focus:ring-1 focus:ring-brand-light focus:border-brand-light text-gray-700 bg-white shadow-sm cursor-pointer">
+                            <option>Todos</option>
+                            <option>Ativos</option>
+                            <option>Inativos</option>
+                            <option>Pendentes</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-500">Vendedor:</span>
+                        <select class="text-sm border border-gray-300 rounded-lg py-1.5 px-3 focus:ring-1 focus:ring-brand-light focus:border-brand-light text-gray-700 bg-white shadow-sm cursor-pointer">
+                            <option>Todos</option>
+                            <option>Ana Souza</option>
+                            <option>Roberto Lima</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-500">Total: <strong class="text-gray-800">145 Registros</strong></span>
+                </div>
+            </div>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead class="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
+                                <tr>
+                                    <th class="px-6 py-3">Cliente / Empresa</th>
+                                    <th class="px-6 py-3">Contatos</th>
+                                    <th class="px-6 py-3">Vendedor</th>
+                                    <th class="px-6 py-3">Status</th>
+                                    <th class="px-6 py-3 text-right">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                
+                                <tr class="hover:bg-gray-50 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center text-brand-light font-bold text-xs">
+                                                IT
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-gray-800 text-sm">Indústria Têxtil Silva</p>
+                                                <p class="text-xs text-gray-500">CNPJ: 12.345.678/0001-90</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p class="text-gray-800 flex items-center gap-1"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> financeiro@silva.com</p>
+                                        <p class="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (47) 3333-4444</p>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <img class="h-6 w-6 rounded-full" src="https://ui-avatars.com/api/?name=Ana+Souza&background=random" alt="">
+                                            <span class="text-gray-600 text-sm">Ana Souza</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                            Ativo
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="cliente-detalhes.html" class="text-gray-400 hover:text-brand transition-colors p-2 inline-block rounded-full hover:bg-brand-bg" title="Ver Detalhes">
+                                            <i data-lucide="external-link" class="h-4 w-4"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xs">
+                                                TS
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-gray-800 text-sm">Tech Solutions LTDA</p>
+                                                <p class="text-xs text-gray-500">CNPJ: 98.765.432/0001-10</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p class="text-gray-800 flex items-center gap-1"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> contato@techsol.com</p>
+                                        <p class="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (11) 99999-8888</p>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <img class="h-6 w-6 rounded-full" src="https://ui-avatars.com/api/?name=Roberto+Lima&background=random" alt="">
+                                            <span class="text-gray-600 text-sm">Roberto Lima</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
+                                            Ativo
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#" class="text-gray-400 hover:text-brand transition-colors p-2 inline-block rounded-full hover:bg-brand-bg" title="Ver Detalhes">
+                                            <i data-lucide="external-link" class="h-4 w-4"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-xs">
+                                                PC
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-gray-800 text-sm">Padaria Central</p>
+                                                <p class="text-xs text-gray-500">CNPJ: 11.222.333/0001-00</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p class="text-gray-800 flex items-center gap-1"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> adm@padariacentral.com</p>
+                                        <p class="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (47) 3030-2020</p>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <img class="h-6 w-6 rounded-full" src="https://ui-avatars.com/api/?name=Ana+Souza&background=random" alt="">
+                                            <span class="text-gray-600 text-sm">Ana Souza</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 border border-red-200">
+                                            Inativo
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#" class="text-gray-400 hover:text-brand transition-colors p-2 inline-block rounded-full hover:bg-brand-bg" title="Ver Detalhes">
+                                            <i data-lucide="external-link" class="h-4 w-4"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-10 w-10 bg-gray-100 rounded-full flex items-center justify-center text-yellow-600 font-bold text-xs">
+                                                LB
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-gray-800 text-sm">Logística Brasil</p>
+                                                <p class="text-xs text-gray-500">CNPJ: 55.666.777/0001-99</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <p class="text-gray-800 flex items-center gap-1"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> compras@logbrasil.com</p>
+                                        <p class="text-xs text-gray-500 mt-0.5 flex items-center gap-1"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (11) 4004-5000</p>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center gap-2">
+                                            <img class="h-6 w-6 rounded-full" src="https://ui-avatars.com/api/?name=Roberto+Lima&background=random" alt="">
+                                            <span class="text-gray-600 text-sm">Roberto Lima</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">
+                                            Pendente
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <a href="#" class="text-gray-400 hover:text-brand transition-colors p-2 inline-block rounded-full hover:bg-brand-bg" title="Ver Detalhes">
+                                            <i data-lucide="external-link" class="h-4 w-4"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="bg-white px-4 py-3 border-t border-gray-200 flex items-center justify-between sm:px-6">
+                        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                            <div>
+                                <p class="text-sm text-gray-700">
+                                    Mostrando <span class="font-medium">1</span> a <span class="font-medium">10</span> de <span class="font-medium">145</span> resultados
+                                </p>
+                            </div>
+                            <div>
+                                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                                    </a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-brand-light text-sm font-medium text-white">2</a>
+                                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0 z-10">
+                <a href="https://hangar.digital/" title="Desenvolvido por Hangar Digital" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital 
+                    <img src="img/logo-hangar.svg" alt="Hangar Digital" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

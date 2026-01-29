@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pedido - Ideal Telecom</title>
+    
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5', 
+                            default: '#19476B', 
+                            teal: '#0D9DA5', 
+                            orange: '#EB5435', 
+                            yellow: '#F5A62D', 
+                            pink: '#E71552', 
+                            bg: '#F8FAFC', 
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+<aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Clientes
+                    </a>
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Contratos
+                    </a>
+                    
+                    <a href="pedidos-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md border-l-4 border-brand-light">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-brand-light"></i>
+                        Pedidos
+                    </a>
+
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                        <span class="ml-auto bg-brand-orange text-white py-0.5 px-2 rounded-full text-xs">2</span>
+                    </a>
+                    <div class="pt-4 pb-2">
+                        <p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </nav>
+
+
+                <div class="mt-8">
+                    <h3 class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="shopping-bag" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question-mark" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                            <i data-lucide="settings" class="h-4 w-4"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
+                            <i data-lucide="log-out" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+            
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <a href="pedidos-lista.html" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </a>
+                        <div>
+                            <h1 class="text-xl font-semibold text-brand-default">Pedido #PED-904</h1>
+                            <p class="text-xs text-gray-500 font-medium">Criado em 15/01/2026 às 14:30 por Ricardo Jorge (Vendedor)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button class="flex md:hidden p-2 text-gray-400"><i data-lucide="more-vertical"></i></button>
+                        <div class="hidden md:flex gap-3">
+                            <button class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                <i data-lucide="printer" class="h-4 w-4"></i> Imprimir
+                            </button>
+                            <div class="h-6 w-px bg-gray-200"></div>
+                            <button class="p-2 text-gray-400 hover:text-brand transition-colors relative" title="Notificações">
+                                <i data-lucide="bell" class="h-6 w-6"></i>
+                                <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="h-12 w-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                                    <i data-lucide="clock" class="h-6 w-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Status Atual</p>
+                                    <h2 class="text-lg font-bold text-gray-800 uppercase">Aguardando Ativação</h2>
+                                    
+                                </div>
+                                <div>
+                                    <button onclick="openModal()" class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium bg-brand-default text-white rounded-full hover:bg-opacity-90 transition-all shadow-sm">
+                                        <i data-lucide="refresh-cw" class="h-4 w-4"></i> Atualizar Status
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-gray-400 font-medium mb-1 uppercase">Previsão</p>
+                                <p class="text-sm font-bold text-brand-default">22/01/2026</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                            <div class="p-4 border-b border-gray-100 bg-gray-50/50 flex justify-between items-center">
+                                <h3 class="font-bold text-brand-default text-sm flex items-center gap-2">
+                                    <i data-lucide="info" class="h-4 w-4"></i> Dados do Pedido
+                                </h3>
+                                <a href="clientes-lista.html" class="text-xs font-semibold text-brand-light hover:underline">Ver ficha do cliente</a>
+                            </div>
+                            <div class="p-6 grid grid-cols-2 gap-y-6 gap-x-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Cliente</label>
+                                    <p class="text-sm font-semibold text-gray-800">Tech Solutions LTDA</p>
+                                    <p class="text-xs text-gray-500 font-medium">CNPJ: 00.000.000/0001-00</p>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Vendedor Responsável</label>
+                                    <p class="text-sm font-semibold text-gray-800 flex items-center gap-2">
+                                        <i data-lucide="user-square-2" class="h-4 w-4 text-brand-teal"></i> Ricardo Jorge
+                                    </p>
+                                </div>
+                                <div class="col-span-2 h-px bg-gray-100"></div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Plano Escolhido</label>
+                                    <p class="text-sm font-semibold text-brand-teal">Link Dedicado 100MB</p>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Valor Mensal</label>
+                                    <p class="text-sm font-bold text-gray-800">R$ 1.500,00</p>
+                                </div>
+                                <div class="col-span-2">
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Endereço de Instalação</label>
+                                    <p class="text-sm text-gray-600 font-medium italic">Rua das Américas, 1200 - Centro, Joinville/SC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-1 space-y-6">
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden h-fit">
+                            <div class="p-4 border-b border-gray-100 bg-gray-50/50">
+                                <h3 class="font-bold text-brand-default text-sm flex items-center gap-2">
+                                    <i data-lucide="history" class="h-4 w-4"></i> Histórico do Pedido
+                                </h3>
+                            </div>
+                            <div class="p-6">
+                                <div class="flow-root">
+                                    <ul role="list" class="-mb-8">
+                                        <li>
+                                            <div class="relative pb-8">
+                                                <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"></span>
+                                                <div class="relative flex space-x-3">
+                                                    <div>
+                                                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                                            <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                        <div>
+                                                            <p class="text-xs font-bold text-gray-800">Pedido Criado</p>
+                                                            <p class="text-[10px] text-gray-500">Por: Ricardo Jorge</p>
+                                                        </div>
+                                                        <div class="whitespace-nowrap text-right text-[10px] text-gray-400 font-medium">
+                                                            15 Jan
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="relative pb-8">
+                                                <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"></span>
+                                                <div class="relative flex space-x-3">
+                                                    <div>
+                                                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                                            <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                        <div>
+                                                            <p class="text-xs font-bold text-gray-800">Viabilidade Técnica</p>
+                                                            <p class="text-[10px] text-gray-500">Aprovado pelo BKO</p>
+                                                        </div>
+                                                        <div class="whitespace-nowrap text-right text-[10px] text-gray-400 font-medium">
+                                                            16 Jan
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="relative pb-8">
+                                                <div class="relative flex space-x-3">
+                                                    <div>
+                                                        <span class="h-8 w-8 rounded-full bg-yellow-400 flex items-center justify-center ring-8 ring-white">
+                                                            <i data-lucide="loader-2" class="h-4 w-4 text-white animate-spin"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                        <div>
+                                                            <p class="text-xs font-bold text-yellow-600">Aguardando Ativação</p>
+                                                            <p class="text-[10px] text-gray-500 italic text-balance leading-tight">Equipe técnica em deslocamento.</p>
+                                                        </div>
+                                                        <div class="whitespace-nowrap text-right text-[10px] text-gray-400 font-medium">
+                                                            Hoje
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
+                <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital 
+                    <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <div id="modalStatus" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-brand-default/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg border border-gray-200">
+                
+                <div class="bg-white px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-brand-default flex items-center gap-2">
+                        <i data-lucide="refresh-cw" class="h-5 w-5 text-brand-teal"></i>
+                        Atualizar Status do Pedido
+                    </h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <i data-lucide="x" class="h-6 w-6"></i>
+                    </button>
+                </div>
+
+                <form action="#">
+                    <div class="p-6 space-y-5">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-wider">Selecione o Novo Status</label>
+                            <select required class="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white text-sm font-medium">
+                                <option value="">Escolha uma opção...</option>
+                                <option value="viabilidade">Em Viabilidade Técnica</option>
+                                <option value="aguardando">Aguardando Ativação</option>
+                                <option value="ativado">Ativado / Concluído</option>
+                                <option value="cancelado">Cancelado / Recusado</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2 tracking-wider">Notas de Atualização</label>
+                            <textarea rows="4" placeholder="Descreva o motivo da mudança ou observações técnicas..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm outline-none"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 px-6 py-4 flex flex-row-reverse gap-3">
+                        <button type="submit" class="px-6 py-2 bg-brand-default text-white text-sm font-bold rounded-lg hover:bg-opacity-90 shadow-sm transition-all transform hover:-translate-y-0.5">
+                            Confirmar Alteração
+                        </button>
+                        <button type="button" onclick="closeModal()" class="px-6 py-2 border border-gray-300 text-gray-600 text-sm font-medium rounded-lg hover:bg-white hover:text-gray-800 transition-colors">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const modal = document.getElementById('modalStatus');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            // Impede o scroll do body quando o modal estiver aberto
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Opcional: Fechar ao clicar fora do modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
