@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Contrato - Ideal Telecom</title>
+    
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5', 
+                            default: '#19476B', 
+                            teal: '#0D9DA5', 
+                            orange: '#EB5435', 
+                            yellow: '#F5A62D', 
+                            pink: '#E71552', 
+                            bg: '#F8FAFC', 
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Clientes
+                    </a>
+                    <a href="contratos-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md border-l-4 border-brand-light">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-brand-light"></i>
+                        Contratos
+                    </a>
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Pedidos
+                    </a>
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                        <span class="ml-auto bg-brand-orange text-white py-0.5 px-2 rounded-full text-xs">2</span>
+                    </a>
+                    <div class="pt-4 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </nav>
+
+                <div class="mt-2">
+                    <h3 class="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="shopping-bag" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff">
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button class="text-gray-400 hover:text-brand-orange p-1.5 rounded-full transition-colors">
+                            <i data-lucide="log-out" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+            
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <a href="contratos-lista.html" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </a>
+                        <div>
+                            <h1 class="text-xl font-semibold text-brand-default">Contrato #CT-2026-904</h1>
+                            <p class="text-xs text-gray-500 font-medium tracking-tight">Vigente desde 01/01/2026 • Gerado a partir do Pedido #PED-904</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="hidden md:flex gap-3">
+                            <button class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                <i data-lucide="printer" class="h-4 w-4"></i> Imprimir
+                            </button>
+                            <a href="contrato-novo.html" class="flex items-center gap-2 px-4 py-1.5 text-sm font-medium border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                <i data-lucide="edit" class="h-4 w-4 text-brand-teal"></i> Editar Contrato
+                            </a>
+                            <button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-brand-default text-white border border-brand-default rounded-full hover:bg-white hover:text-brand-default hover:border-brand-default transition-colors">
+                                <i data-lucide="file-plus-corner" class="h-4 w-4"></i> Renovar Contrato 
+                            </button>
+                            <div class="h-6 w-px bg-gray-200"></div>
+                            <button class="p-2 text-gray-400 hover:text-brand transition-colors relative" title="Notificações">
+                                <i data-lucide="bell" class="h-6 w-6"></i>
+                                <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                    <i data-lucide="shield-check" class="h-6 w-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Status do Contrato</p>
+                                    <h2 class="text-lg font-bold text-gray-800 uppercase">Ativo / Vigente</h2>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-gray-400 font-medium mb-1 uppercase tracking-tighter">Próxima Renovação</p>
+                                <p class="text-sm font-bold text-brand-orange uppercase">Janeiro/2027</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                            <div class="p-4 border-b border-gray-100 bg-gray-50/50 flex justify-between items-center">
+                                <h3 class="font-bold text-brand-default text-sm flex items-center gap-2">
+                                    <i data-lucide="file-text" class="h-4 w-4"></i> Dados da Ficha Técnica
+                                </h3>
+                                <a href="cliente-detalhes.html" class="text-xs font-semibold text-brand-light hover:underline tracking-tighter">Ver Cliente</a>
+                            </div>
+                            <div class="p-6">
+                                <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-6">
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Cliente</label>
+                                        <p class="text-sm font-semibold text-gray-800 uppercase">Hospital Santa Isabel LTDA</p>
+                                        <p class="text-xs text-gray-500 font-medium tracking-tight">CNPJ: 12.345.678/0001-90</p>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Vendedor Responsável</label>
+                                        <div class="flex items-center gap-2">
+                                            <div class="h-6 w-6 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange text-[10px] font-bold">RJ</div>
+                                            <p class="text-sm font-semibold text-gray-800">Ricardo Jorge</p>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-100 col-span-2"></div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1">Data de Início</label>
+                                        <p class="text-sm font-semibold text-gray-800">01/01/2026</p>
+                                    </div>
+                                    <div>
+                                        <label class="block text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-tighter text-brand-orange">Data de Renovação</label>
+                                        <p class="text-sm font-bold text-gray-800">01/01/2028 <span class="text-[10px] text-gray-400 font-normal">(24 Meses)</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest border-b border-gray-100 pb-1">Serviços Contratados</label>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between items-center py-2 px-3 bg-slate-50 rounded-lg border border-gray-100">
+                                            <div>
+                                                <p class="text-xs font-bold text-gray-700 uppercase">Link Dedicado 100MB</p>
+                                                <p class="text-[9px] text-gray-400 font-medium">FIBRA ÓPTICA • IP FIXO</p>
+                                            </div>
+                                            <p class="text-sm font-bold text-gray-700">R$ 1.200,00</p>
+                                        </div>
+                                        <div class="flex justify-between items-center py-2 px-3 bg-slate-50 rounded-lg border border-gray-100">
+                                            <div>
+                                                <p class="text-xs font-bold text-gray-700 uppercase">PABX Virtual (SaaS)</p>
+                                                <p class="text-[9px] text-gray-400 font-medium">10 RAMAIS INCLUSOS</p>
+                                            </div>
+                                            <p class="text-sm font-bold text-gray-700">R$ 450,00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 flex justify-between items-center px-3 py-3 bg-slate-100 border border-slate-200 rounded-lg shadow-sm">
+                                        <span class="text-xs font-bold text-brand-default uppercase tracking-widest">Total Mensal Recorrente</span>
+                                        <span class="text-lg font-black text-brand-default tracking-tighter">R$ 1.650,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                            <div class="p-4 border-b border-gray-100 bg-gray-50/50">
+                                <h3 class="font-bold text-brand-default text-sm flex items-center gap-2 uppercase tracking-widest text-[10px]">
+                                    <i data-lucide="paperclip" class="h-4 w-4"></i> Anexos
+                                </h3>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center justify-between p-4 border border-dashed border-gray-200 rounded-lg hover:bg-slate-50 transition-all group cursor-pointer bg-slate-50/30">
+                                    <div class="flex items-center gap-4">
+                                        <div class="p-2 bg-brand-pink/10 rounded-lg">
+                                            <i data-lucide="file-pdf" class="text-brand-pink h-6 w-6"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-gray-700">Contrato_Assinado_Santa_Isabel.pdf</p>
+                                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter tracking-widest">DOCUSIGN • VALIDADO PELO JURÍDICO</p>
+                                        </div>
+                                    </div>
+                                    <button class="p-2 text-gray-300 group-hover:text-brand-light transition-colors">
+                                        <i data-lucide="download" class="h-5 w-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-1 space-y-6">
+                        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden h-fit">
+                            <div class="p-4 border-b border-gray-100 bg-gray-50/50">
+                                <h3 class="font-bold text-brand-default text-sm flex items-center gap-2">
+                                    <i data-lucide="history" class="h-4 w-4"></i> Linha do Tempo
+                                </h3>
+                            </div>
+                            <div class="p-6">
+                                <div class="flow-root">
+                                    <ul role="list" class="-mb-8">
+                                        <li>
+                                            <div class="relative pb-8">
+                                                <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200"></span>
+                                                <div class="relative flex space-x-3">
+                                                    <div>
+                                                        <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
+                                                            <i data-lucide="check" class="h-4 w-4 text-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                        <div>
+                                                            <p class="text-xs font-bold text-gray-800">Contrato Ativado</p>
+                                                            <p class="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Por: Maria (BKO)</p>
+                                                        </div>
+                                                        <div class="whitespace-nowrap text-right text-[10px] text-gray-400 font-medium uppercase">
+                                                            29 Jan
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="relative pb-8">
+                                                <div class="relative flex space-x-3">
+                                                    <div>
+                                                        <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
+                                                            <i data-lucide="file-check" class="h-4 w-4 text-white"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                                                        <div>
+                                                            <p class="text-xs font-bold text-gray-800 italic">Documentação Validada</p>
+                                                            <p class="text-[10px] text-gray-500">Contrato Docusign OK</p>
+                                                        </div>
+                                                        <div class="whitespace-nowrap text-right text-[10px] text-gray-400 font-medium">
+                                                            28 Jan
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
+                <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital 
+                    <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

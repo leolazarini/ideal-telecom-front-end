@@ -43,39 +43,42 @@
                 </div>
 
                 <nav class="space-y-1">
-                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
                         <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Dashboard
                     </a>
-                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
                         <i data-lucide="users" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Clientes
                     </a>
-                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
                         <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Contratos
                     </a>
-                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
                         <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Pedidos
                     </a>
-                    <a href="chamados-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md border-l-4 border-brand-light">
+                    <a href="chamados-lista.html" class="bg-white/10 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md border-l-4 border-brand-light">
                         <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-brand-light"></i>
                         Chamados
                     </a>
-                <div class="pt-4 pb-2">
-    <p class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
-</div>
-<a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-3 text-sm font-medium rounded-md transition-colors">
-    <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-    Usuários
-
-</a>
+                    <div class="pt-4 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
                 </nav>
 
 
-                <div class="mt-8">
-                    <h3 class="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                <div class="mt-2">
+                    <h3 class="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
                     <div class="mt-1 space-y-1">
                         <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
                             <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
@@ -150,12 +153,15 @@
                             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="md:col-span-2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Cliente Vinculado *</label>
-                                    <select required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light bg-white">
-                                        <option value="">Selecione um cliente...</option>
-                                        <option>Tech Solutions LTDA</option>
-                                        <option>Indústria Alfa</option>
-                                        <option>Varejo Express S.A.</option>
-                                    </select>
+                                    <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                                        <input id="cliente-selecionado" type="text" required readonly placeholder="Selecione um cliente..."
+                                            class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light bg-gray-50 text-gray-700">
+                                        <button type="button" id="abrir-modal-cliente"
+                                            class="px-4 py-2 text-sm font-medium text-white bg-brand-teal rounded-lg hover:bg-brand-default transition-colors">
+                                            Buscar cliente
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="cliente" id="cliente-hidden">
                                 </div>
 
                                 <div class="md:col-span-2">
@@ -167,9 +173,15 @@
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de Chamado</label>
                                     <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light bg-white">
-                                        <option>Suporte Técnico</option>
-                                        <option>Financeiro / Cobrança</option>
-                                        <option>Comercial / Upgrade</option>
+                                        <option value="">Selecione o tipo...</option>
+                                        <option>Ativação e desativação de serviço</option>
+                                        <option>Troca de chip</option>
+                                        <option>Cancelamento</option>
+                                        <option>Suspensao</option>
+                                        <option>Contestacao de Faturas</option>
+                                        <option>Falha na Internet Movel</option>
+                                        <option>Falha na Internet Fixa</option>
+                                        <option>Outros</option>
                                     </select>
                                 </div>
 
@@ -240,8 +252,143 @@
         </div>
     </div>
 
+    <div id="cliente-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50" data-modal-overlay></div>
+        <div class="relative mx-auto mt-10 w-[90%] max-w-2xl bg-white rounded-xl shadow-xl border border-gray-200">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                <div>
+                    <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Selecionar cliente</p>
+                    <h2 class="text-lg font-semibold text-brand-default">Buscar cliente vinculado</h2>
+                </div>
+                <button type="button" class="p-2 text-gray-400 hover:text-gray-600" data-close-modal aria-label="Fechar">
+                    <i data-lucide="x" class="h-5 w-5"></i>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <div>
+                    <label for="cliente-pesquisa" class="block text-sm font-medium text-gray-700 mb-1">Pesquisar</label>
+                    <div class="relative">
+                        <input id="cliente-pesquisa" type="text" list="cliente-sugestoes" placeholder="Digite o nome ou CNPJ..."
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                        <i data-lucide="search" class="absolute right-3 top-2.5 h-4 w-4 text-gray-400"></i>
+                    </div>
+                    <datalist id="cliente-sugestoes"></datalist>
+                    <p class="mt-1 text-xs text-gray-400">Digite para ver sugestões e filtre a lista automaticamente.</p>
+                </div>
+
+                <div>
+                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resultados</p>
+                    <div id="cliente-resultados" class="max-h-64 overflow-y-auto divide-y divide-gray-100 border border-gray-200 rounded-lg"></div>
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-100 bg-gray-50">
+                <button type="button" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-800 transition-colors" data-close-modal>
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         lucide.createIcons();
+
+        const clientes = [
+            { nome: 'Tech Solutions LTDA', documento: '12.345.678/0001-90', segmento: 'Tecnologia' },
+            { nome: 'Indústria Alfa', documento: '45.987.321/0001-55', segmento: 'Indústria' },
+            { nome: 'Varejo Express S.A.', documento: '09.876.543/0001-22', segmento: 'Varejo' },
+            { nome: 'Grupo Horizonte', documento: '98.765.432/0001-11', segmento: 'Serviços' },
+            { nome: 'Logística Rápida Ltda', documento: '33.444.555/0001-00', segmento: 'Logística' },
+            { nome: 'Hospital São Lucas', documento: '21.123.456/0001-77', segmento: 'Saúde' },
+        ];
+
+        const modal = document.getElementById('cliente-modal');
+        const abrirModal = document.getElementById('abrir-modal-cliente');
+        const overlay = modal.querySelector('[data-modal-overlay]');
+        const fecharBotoes = modal.querySelectorAll('[data-close-modal]');
+        const inputPesquisa = document.getElementById('cliente-pesquisa');
+        const listaResultados = document.getElementById('cliente-resultados');
+        const datalistSugestoes = document.getElementById('cliente-sugestoes');
+        const clienteSelecionado = document.getElementById('cliente-selecionado');
+        const clienteHidden = document.getElementById('cliente-hidden');
+
+        const montarSugestoes = () => {
+            datalistSugestoes.innerHTML = '';
+            clientes.forEach((cliente) => {
+                const option = document.createElement('option');
+                option.value = cliente.nome;
+                datalistSugestoes.appendChild(option);
+            });
+        };
+
+        const montarResultados = (filtro = '') => {
+            const termo = filtro.trim().toLowerCase();
+            const filtrados = clientes.filter((cliente) => {
+                return (
+                    cliente.nome.toLowerCase().includes(termo) ||
+                    cliente.documento.toLowerCase().includes(termo) ||
+                    cliente.segmento.toLowerCase().includes(termo)
+                );
+            });
+
+            listaResultados.innerHTML = '';
+
+            if (!filtrados.length) {
+                const vazio = document.createElement('div');
+                vazio.className = 'px-4 py-3 text-sm text-gray-500';
+                vazio.textContent = 'Nenhum cliente encontrado.';
+                listaResultados.appendChild(vazio);
+                return;
+            }
+
+            filtrados.forEach((cliente) => {
+                const item = document.createElement('button');
+                item.type = 'button';
+                item.className = 'w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors';
+                item.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-semibold text-gray-700">${cliente.nome}</p>
+                            <p class="text-xs text-gray-400">${cliente.documento} • ${cliente.segmento}</p>
+                        </div>
+                        <span class="text-xs font-medium text-brand-light">Selecionar</span>
+                    </div>
+                `;
+                item.addEventListener('click', () => {
+                    clienteSelecionado.value = cliente.nome;
+                    clienteHidden.value = cliente.nome;
+                    fecharModal();
+                });
+                listaResultados.appendChild(item);
+            });
+        };
+
+        const abrirModalCliente = () => {
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            inputPesquisa.value = '';
+            montarResultados('');
+            setTimeout(() => inputPesquisa.focus(), 100);
+        };
+
+        const fecharModal = () => {
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        abrirModal.addEventListener('click', abrirModalCliente);
+        overlay.addEventListener('click', fecharModal);
+        fecharBotoes.forEach((botao) => botao.addEventListener('click', fecharModal));
+        inputPesquisa.addEventListener('input', (event) => montarResultados(event.target.value));
+        inputPesquisa.addEventListener('change', (event) => montarResultados(event.target.value));
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                fecharModal();
+            }
+        });
+
+        montarSugestoes();
+        montarResultados('');
     </script>
 </body>
 </html>
