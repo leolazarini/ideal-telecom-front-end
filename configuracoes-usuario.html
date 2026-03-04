@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações da Conta - Ideal Telecom</title>
+
+    <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#1597D5',
+                            default: '#19476B',
+                            teal: '#0D9DA5',
+                            orange: '#EB5435',
+                            yellow: '#F5A62D',
+                            pink: '#E71552',
+                            bg: '#F8FAFC',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-bg text-gray-700 antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <!-- Sidebar -->
+        <aside class="hidden w-64 bg-brand-default border-r border-gray-200 md:flex flex-col flex-shrink-0 transition-all duration-300">
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <div class="mb-10 flex items-center justify-center pt-2">
+                    <img src="img/logo-idealtelecom.svg" alt="Ideal Telecom" class="h-12 w-auto">
+                </div>
+
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="layout-dashboard" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Dashboard
+                    </a>
+                    <a href="clientes-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Clientes
+                    </a>
+                    <a href="contratos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="file-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Contratos
+                    </a>
+                    <a href="pedidos-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="receipt-text" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Pedidos
+                    </a>
+                    <a href="chamados-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="message-circle-question" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Chamados
+                    </a>
+                </nav>
+
+                <div class="mt-2">
+                    <h3 class="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
+                    <div class="mt-1 space-y-1">
+                        <a href="relatorio-contratos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-bar-chart" class="mr-3 h-5 w-5 text-gray-400"></i> Contratos
+                        </a>
+                        <a href="relatorio-pedidos.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="shopping-bag" class="mr-3 h-5 w-5 text-gray-400"></i> Pedidos
+                        </a>
+                        <a href="relatorio-chamados.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                            <i data-lucide="file-question-mark" class="mr-3 h-5 w-5 text-gray-400"></i> Chamados
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Configurações</p>
+                    </div>
+                    <a href="configuracoes-ofertas.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="tag" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Ofertas
+                    </a>
+                </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="h-9 w-9 rounded-full bg-gray-300 border-2 border-brand-teal" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff" alt="">
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-white">Valter</p>
+                            <p class="text-xs text-gray-400">Gestor</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <a href="configuracoes-usuario.html" class="text-white bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                            <i data-lucide="settings" class="h-4 w-4"></i>
+                        </a>
+                        <a href="index.html" class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
+                            <i data-lucide="log-out" class="h-4 w-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
+
+            <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
+                <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <button onclick="history.back()" class="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500">
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </button>
+                        <h1 class="text-xl font-semibold text-brand-default">Configurações da Conta</h1>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="h-6 w-px bg-gray-200"></div>
+                        <button class="p-2 text-gray-400 hover:text-brand-default transition-colors relative" title="Notificações">
+                            <i data-lucide="bell" class="h-6 w-6"></i>
+                            <span class="absolute top-1 right-2 h-2 w-2 bg-brand-orange rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8">
+                <div class="max-w-3xl mx-auto space-y-6">
+
+                    <!-- Avatar & nome -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex items-center gap-6">
+                        <div class="relative flex-shrink-0">
+                            <img id="avatar-preview" src="https://ui-avatars.com/api/?name=Valter&background=0D9DA5&color=fff&size=128"
+                                class="h-20 w-20 rounded-full border-4 border-brand-teal object-cover" alt="Foto de perfil">
+                            <button onclick="document.getElementById('input-foto').click()"
+                                class="absolute bottom-0 right-0 bg-brand-default hover:bg-brand-light text-white rounded-full p-1.5 shadow transition-colors" title="Alterar foto">
+                                <i data-lucide="camera" class="h-3.5 w-3.5"></i>
+                            </button>
+                            <input type="file" id="input-foto" accept="image/*" class="hidden">
+                        </div>
+                        <div>
+                            <p class="text-lg font-bold text-brand-default">Valter</p>
+                            <p class="text-sm text-gray-500">Gestor</p>
+                            <button onclick="document.getElementById('input-foto').click()"
+                                class="mt-2 text-xs font-medium text-brand-light hover:underline">
+                                Alterar foto de perfil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informações Pessoais -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                            <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                <i data-lucide="user" class="h-4 w-4"></i>
+                                Informações Pessoais
+                            </h3>
+                        </div>
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
+                                <input type="text" value="Valter Souza"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nome de exibição</label>
+                                <input type="text" value="Valter"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                <input type="email" value="valter@idealtelecom.com.br"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" placeholder="(00) 00000-0000"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Perfil / Função</label>
+                                <input type="text" value="Gestor" readonly
+                                    class="w-full px-3 py-2 border border-gray-200 rounded-lg bg-gray-50 text-gray-500 text-sm cursor-not-allowed"
+                                    title="O perfil só pode ser alterado por um administrador">
+                                <p class="mt-1 text-xs text-gray-400">O perfil é definido pelo administrador do sistema.</p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 flex justify-end">
+                            <button onclick="salvarInformacoes()"
+                                class="px-5 py-2 bg-brand-default hover:bg-brand-light text-white rounded-lg text-sm font-medium shadow-sm transition-all">
+                                Salvar informações
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Segurança -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                            <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                <i data-lucide="lock" class="h-4 w-4"></i>
+                                Segurança
+                            </h3>
+                        </div>
+                        <div class="p-6 grid grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Senha atual</label>
+                                <div class="relative">
+                                    <input type="password" id="senha-atual" placeholder="••••••••"
+                                        class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                                    <button type="button" onclick="toggleSenha('senha-atual', this)"
+                                        class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600">
+                                        <i data-lucide="eye" class="h-4 w-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nova senha</label>
+                                <div class="relative">
+                                    <input type="password" id="senha-nova" placeholder="••••••••"
+                                        class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm"
+                                        oninput="avaliarForcaSenha(this.value)">
+                                    <button type="button" onclick="toggleSenha('senha-nova', this)"
+                                        class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600">
+                                        <i data-lucide="eye" class="h-4 w-4"></i>
+                                    </button>
+                                </div>
+                                <!-- Indicador de força -->
+                                <div id="forca-container" class="mt-2 hidden">
+                                    <div class="flex gap-1 mb-1">
+                                        <div id="forca-b1" class="h-1.5 flex-1 rounded-full bg-gray-200 transition-colors"></div>
+                                        <div id="forca-b2" class="h-1.5 flex-1 rounded-full bg-gray-200 transition-colors"></div>
+                                        <div id="forca-b3" class="h-1.5 flex-1 rounded-full bg-gray-200 transition-colors"></div>
+                                        <div id="forca-b4" class="h-1.5 flex-1 rounded-full bg-gray-200 transition-colors"></div>
+                                    </div>
+                                    <p id="forca-label" class="text-xs font-medium text-gray-400"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Repetir nova senha</label>
+                                <div class="relative">
+                                    <input type="password" id="senha-confirmar" placeholder="••••••••"
+                                        class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                                    <button type="button" onclick="toggleSenha('senha-confirmar', this)"
+                                        class="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600">
+                                        <i data-lucide="eye" class="h-4 w-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 flex justify-end">
+                            <button onclick="alterarSenha()"
+                                class="px-5 py-2 bg-brand-default hover:bg-brand-light text-white rounded-lg text-sm font-medium shadow-sm transition-all">
+                                Alterar senha
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Notificações -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                            <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                <i data-lucide="bell" class="h-4 w-4"></i>
+                                Notificações
+                            </h3>
+                        </div>
+                        <div class="p-6 divide-y divide-gray-100 space-y-0">
+
+                            <div class="flex items-center justify-between py-4 first:pt-0">
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700">Alertas de Vencimento de Contrato</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Notificar quando um contrato estiver próximo do vencimento</p>
+                                </div>
+                                <button type="button" role="switch" aria-checked="true" onclick="toggleSwitch(this)"
+                                    class="switch-on relative inline-flex h-6 w-11 items-center rounded-full transition-colors bg-brand-teal focus:outline-none">
+                                    <span class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform translate-x-6"></span>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center justify-between py-4 last:pb-0">
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700">Alertas de Chamado Aberto</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Notificar ao abrir um novo chamado de suporte</p>
+                                </div>
+                                <button type="button" role="switch" aria-checked="true" onclick="toggleSwitch(this)"
+                                    class="switch-on relative inline-flex h-6 w-11 items-center rounded-full transition-colors bg-brand-teal focus:outline-none">
+                                    <span class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform translate-x-6"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
+                <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
+                    Desenvolvido por Hangar Digital
+                    <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
+                </a>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Toast de feedback -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden">
+        <div class="flex items-center gap-3 bg-brand-default text-white px-5 py-3 rounded-xl shadow-lg text-sm font-medium">
+            <i data-lucide="check-circle" class="h-4 w-4 text-brand-teal flex-shrink-0"></i>
+            <span id="toast-msg">Salvo com sucesso!</span>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Foto de perfil
+        document.getElementById('input-foto').addEventListener('change', function () {
+            const file = this.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('avatar-preview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Toggle senha visível/oculta
+        function toggleSenha(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+            btn.querySelector('i').setAttribute('data-lucide', isPassword ? 'eye-off' : 'eye');
+            lucide.createIcons();
+        }
+
+        // Força da senha
+        function avaliarForcaSenha(valor) {
+            const container = document.getElementById('forca-container');
+            const label = document.getElementById('forca-label');
+            const barras = [
+                document.getElementById('forca-b1'),
+                document.getElementById('forca-b2'),
+                document.getElementById('forca-b3'),
+                document.getElementById('forca-b4'),
+            ];
+
+            if (!valor) { container.classList.add('hidden'); return; }
+            container.classList.remove('hidden');
+
+            let pontos = 0;
+            if (valor.length >= 8) pontos++;
+            if (/[A-Z]/.test(valor)) pontos++;
+            if (/[0-9]/.test(valor)) pontos++;
+            if (/[^A-Za-z0-9]/.test(valor)) pontos++;
+
+            const cores = ['bg-red-500', 'bg-brand-orange', 'bg-yellow-400', 'bg-green-500'];
+            const labels = ['Muito fraca', 'Fraca', 'Moderada', 'Forte'];
+
+            barras.forEach((b, i) => {
+                b.className = 'h-1.5 flex-1 rounded-full transition-colors ' + (i < pontos ? cores[pontos - 1] : 'bg-gray-200');
+            });
+            label.textContent = labels[pontos - 1] || '';
+            label.className = 'text-xs font-medium ' + (pontos <= 1 ? 'text-red-500' : pontos === 2 ? 'text-brand-orange' : pontos === 3 ? 'text-yellow-500' : 'text-green-600');
+        }
+
+        // Toggle notificações
+        function toggleSwitch(btn) {
+            const isOn = btn.classList.contains('switch-on');
+            const thumb = btn.querySelector('span');
+            if (isOn) {
+                btn.classList.remove('switch-on', 'bg-brand-teal');
+                btn.classList.add('bg-gray-300');
+                btn.setAttribute('aria-checked', 'false');
+                thumb.classList.replace('translate-x-6', 'translate-x-1');
+            } else {
+                btn.classList.add('switch-on', 'bg-brand-teal');
+                btn.classList.remove('bg-gray-300');
+                btn.setAttribute('aria-checked', 'true');
+                thumb.classList.replace('translate-x-1', 'translate-x-6');
+            }
+        }
+
+        // Toast helper
+        function mostrarToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+
+        function salvarInformacoes() { mostrarToast('Informações salvas com sucesso!'); }
+
+        function alterarSenha() {
+            const nova = document.getElementById('senha-nova').value;
+            const confirmar = document.getElementById('senha-confirmar').value;
+            if (!nova || !confirmar) { mostrarToast('Preencha os campos de senha.'); return; }
+            if (nova !== confirmar) { mostrarToast('As senhas não coincidem.'); return; }
+            mostrarToast('Senha alterada com sucesso!');
+            ['senha-atual', 'senha-nova', 'senha-confirmar'].forEach(id => document.getElementById(id).value = '');
+            document.getElementById('forca-container').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -76,17 +76,6 @@
                         Chamados
                         <span class="ml-auto bg-brand-orange text-white py-0.5 px-2 rounded-full text-xs">2</span>
                     </a>
-                    <div class="pt-4 pb-1">
-                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
-                    </div>
-                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Usuários
-                    </a>
-                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Logs do Sistema
-                    </a>
                 </nav>
 
 
@@ -104,6 +93,28 @@
                         </a>
                     </div>
                 </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Configurações</p>
+                    </div>
+                    <a href="configuracoes-ofertas.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="tag" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Ofertas
+                    </a>
+                </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </div>
             </div>
 
             <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
@@ -118,9 +129,7 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-1">
-                        <button class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
-                            <i data-lucide="settings" class="h-4 w-4"></i>
-                        </button>
+                        <a href="configuracoes-usuario.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações"><i data-lucide="settings" class="h-4 w-4"></i></a>
                         <button class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
                             <i data-lucide="log-out" class="h-4 w-4"></i>
                         </button>
@@ -138,7 +147,10 @@
                         <h1 class="text-xl font-semibold text-brand-default">Detalhes do Cliente</h1>
                     </div>
                     
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-3">
+                        <button onclick="abrirModalCadastro()" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-brand-default border border-brand-default rounded-lg hover:bg-brand-default hover:text-white transition-colors">
+                            <i data-lucide="eye" class="h-4 w-4"></i> Visualizar cadastro completo
+                        </button>
                         <a href="cliente-novo.html" class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-default border border-gray-300 rounded-lg hover:bg-white hover:border-brand-default hover:text-brand-default transition-colors">
                             <i data-lucide="edit-3" class="h-4 w-4"></i> Editar Dados
                         </a>
@@ -316,7 +328,54 @@
 
                     <div class="space-y-6">
                         
-                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                        <!-- Pessoas do Contrato -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="px-6 py-4 border-b border-gray-100 bg-gray-50">
+                            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider">Pessoas Vinculadas</h3>
+                        </div>
+                        <div class="divide-y divide-gray-100">
+                            <!-- Representante Legal -->
+                            <div class="p-4">
+                                <p class="text-[10px] font-bold text-brand-default uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <i data-lucide="badge-check" class="h-3.5 w-3.5 text-brand-teal"></i>
+                                    Representante Legal
+                                </p>
+                                <p class="text-sm font-semibold text-gray-800">Sr. Alberto Silva</p>
+                                <p class="text-xs text-gray-500 mt-0.5">Sócio-Administrador</p>
+                                <div class="mt-2 space-y-1">
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> alberto@silva.com</p>
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (47) 99988-1234</p>
+                                    <p class="text-xs text-gray-500 flex items-center gap-1.5"><i data-lucide="id-card" class="h-3 w-3 text-gray-400"></i> CPF: 123.456.789-00</p>
+                                </div>
+                            </div>
+                            <!-- Administrador do Contrato -->
+                            <div class="p-4">
+                                <p class="text-[10px] font-bold text-brand-light uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <i data-lucide="file-user" class="h-3.5 w-3.5 text-brand-light"></i>
+                                    Administrador do Contrato
+                                </p>
+                                <p class="text-sm font-semibold text-gray-800">Maria Fernanda Souza</p>
+                                <div class="mt-2 space-y-1">
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> mfernanda@silva.com</p>
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (47) 99977-5566</p>
+                                </div>
+                            </div>
+                            <!-- Autorizado a Receber -->
+                            <div class="p-4">
+                                <p class="text-[10px] font-bold text-brand-teal uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                                    <i data-lucide="hand-coins" class="h-3.5 w-3.5 text-brand-teal"></i>
+                                    Autorizado a Receber
+                                </p>
+                                <p class="text-sm font-semibold text-gray-800">Carlos Eduardo Pinto</p>
+                                <div class="mt-2 space-y-1">
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="mail" class="h-3 w-3 text-gray-400"></i> carlos@silva.com</p>
+                                    <p class="text-xs text-gray-600 flex items-center gap-1.5"><i data-lucide="phone" class="h-3 w-3 text-gray-400"></i> (47) 99966-4433</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                             <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">Responsável pela Conta</h3>
                             
                             <div class="flex items-center mb-4">
@@ -348,6 +407,120 @@
         </div>
     </div>
 
+
+    <!-- Modal: Visualizar Cadastro Completo -->
+    <div id="modal-cadastro" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-brand-default/60 backdrop-blur-sm" onclick="fecharModalCadastro()"></div>
+        <div class="flex min-h-full items-start justify-center p-4 py-8">
+            <div class="relative w-full max-w-3xl bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-10">
+                <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+                    <h3 class="text-lg font-bold text-brand-default flex items-center gap-2">
+                        <i data-lucide="file-text" class="h-5 w-5 text-brand-teal"></i>
+                        Cadastro Completo — Indústria Têxtil Silva LTDA
+                    </h3>
+                    <button onclick="fecharModalCadastro()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="h-6 w-6"></i>
+                    </button>
+                </div>
+                <div class="p-6 max-h-[75vh] overflow-y-auto space-y-6">
+
+                    <!-- Dados da Empresa -->
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2"><i data-lucide="building" class="h-3.5 w-3.5"></i> Dados da Empresa</p>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">CNPJ</p><p class="text-sm font-medium text-gray-800">12.345.678/0001-90</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Inscrição Estadual</p><p class="text-sm font-medium text-gray-800">123.456.789.012</p></div>
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Razão Social</p><p class="text-sm font-medium text-gray-800">Indústria Têxtil Silva LTDA</p></div>
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Endereço</p><p class="text-sm font-medium text-gray-800">Rua das Indústrias, 500 - Distrito Industrial - Joinville/SC - 89220-000</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">E-mail</p><p class="text-sm font-medium text-gray-800">financeiro@silva.com</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Telefone</p><p class="text-sm font-medium text-gray-800">(47) 3333-4444</p></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <!-- Representante Legal -->
+                    <div>
+                        <p class="text-[10px] font-bold text-brand-default uppercase tracking-widest mb-3 flex items-center gap-2"><i data-lucide="badge-check" class="h-3.5 w-3.5 text-brand-teal"></i> Representante Legal</p>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Nome Completo</p><p class="text-sm font-medium text-gray-800">Sr. Alberto Silva</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">CPF</p><p class="text-sm font-medium text-gray-800">123.456.789-00</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">RG</p><p class="text-sm font-medium text-gray-800">12.345.678-9</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Data de Nascimento</p><p class="text-sm font-medium text-gray-800">15/03/1975</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Cargo</p><p class="text-sm font-medium text-gray-800">Sócio-Administrador</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">E-mail</p><p class="text-sm font-medium text-gray-800">alberto@silva.com</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Telefone</p><p class="text-sm font-medium text-gray-800">(47) 99988-1234</p></div>
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Endereço Residencial</p><p class="text-sm font-medium text-gray-800">Rua das Palmeiras, 123 - Centro - Joinville/SC</p></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <!-- Administrador do Contrato -->
+                    <div>
+                        <p class="text-[10px] font-bold text-brand-light uppercase tracking-widest mb-3 flex items-center gap-2"><i data-lucide="file-user" class="h-3.5 w-3.5 text-brand-light"></i> Administrador do Contrato</p>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Nome Completo</p><p class="text-sm font-medium text-gray-800">Maria Fernanda Souza</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">E-mail</p><p class="text-sm font-medium text-gray-800">mfernanda@silva.com</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Telefone</p><p class="text-sm font-medium text-gray-800">(47) 99977-5566</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">WhatsApp</p><p class="text-sm font-medium text-gray-800">(47) 99977-5566</p></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <!-- Autorizado a Receber -->
+                    <div>
+                        <p class="text-[10px] font-bold text-brand-teal uppercase tracking-widest mb-3 flex items-center gap-2"><i data-lucide="hand-coins" class="h-3.5 w-3.5 text-brand-teal"></i> Autorizado a Receber</p>
+                        <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                            <div class="col-span-2"><p class="text-[10px] text-gray-400 uppercase font-semibold">Nome Completo</p><p class="text-sm font-medium text-gray-800">Carlos Eduardo Pinto</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">E-mail</p><p class="text-sm font-medium text-gray-800">carlos@silva.com</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">Telefone</p><p class="text-sm font-medium text-gray-800">(47) 99966-4433</p></div>
+                            <div><p class="text-[10px] text-gray-400 uppercase font-semibold">WhatsApp</p><p class="text-sm font-medium text-gray-800">(47) 99966-4433</p></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-100">
+
+                    <!-- Logins e Senhas -->
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 flex items-center gap-2"><i data-lucide="key-round" class="h-3.5 w-3.5"></i> Logins e Senhas</p>
+                        <div class="space-y-2">
+                            <div class="grid grid-cols-3 gap-4 p-3 bg-gray-50 rounded-lg border border-gray-200 text-sm">
+                                <div><p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Operadora</p><p class="font-medium text-gray-800">Claro</p></div>
+                                <div><p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Login</p><p class="font-medium text-gray-800">adm.silva@claro.com.br</p></div>
+                                <div>
+                                    <p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Senha</p>
+                                    <div class="flex items-center gap-2">
+                                        <span class="senha-texto font-mono text-gray-800 tracking-widest">••••••••</span>
+                                        <button type="button" class="btn-ver-senha text-gray-400 hover:text-gray-600" data-senha="Abcd@1234">
+                                            <i data-lucide="eye" class="h-3.5 w-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 p-3 bg-gray-50 rounded-lg border border-gray-200 text-sm">
+                                <div><p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Operadora</p><p class="font-medium text-gray-800">Vivo</p></div>
+                                <div><p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Login</p><p class="font-medium text-gray-800">silva.contrato@vivo.com.br</p></div>
+                                <div>
+                                    <p class="text-[10px] text-gray-400 uppercase font-semibold mb-1">Senha</p>
+                                    <div class="flex items-center gap-2">
+                                        <span class="senha-texto font-mono text-gray-800 tracking-widest">••••••••</span>
+                                        <button type="button" class="btn-ver-senha text-gray-400 hover:text-gray-600" data-senha="Xyz#5678">
+                                            <i data-lucide="eye" class="h-3.5 w-3.5"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-6 py-4 flex justify-end border-t border-gray-100">
+                    <button onclick="fecharModalCadastro()" class="px-6 py-2 bg-brand-default text-white text-sm font-bold rounded-lg hover:bg-brand-light transition-colors">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="vendedor-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/50" data-modal-overlay></div>
@@ -388,6 +561,35 @@
 
     <script>
         lucide.createIcons();
+
+        // ======== MODAL CADASTRO COMPLETO ========
+        function abrirModalCadastro() {
+            document.getElementById('modal-cadastro').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+
+            // Eye toggle for passwords
+            document.querySelectorAll('.btn-ver-senha').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const container = this.closest('div');
+                    const textoEl = container.querySelector('.senha-texto');
+                    const icon = this.querySelector('i');
+                    const isHidden = textoEl.textContent === '••••••••';
+                    textoEl.textContent = isHidden ? this.dataset.senha : '••••••••';
+                    icon.setAttribute('data-lucide', isHidden ? 'eye-off' : 'eye');
+                    lucide.createIcons();
+                });
+            });
+        }
+
+        function fecharModalCadastro() {
+            document.getElementById('modal-cadastro').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            // Reset passwords to hidden
+            document.querySelectorAll('#modal-cadastro .senha-texto').forEach(el => el.textContent = '••••••••');
+            document.querySelectorAll('#modal-cadastro .btn-ver-senha i').forEach(el => el.setAttribute('data-lucide', 'eye'));
+            lucide.createIcons();
+        }
 
         const vendedores = [
             { nome: 'Rafael Lima', documento: 'CRE 12345', area: 'Corp' },

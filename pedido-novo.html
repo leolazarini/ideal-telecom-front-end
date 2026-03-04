@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Pedido - Ideal Telecom</title>
-    
+
     <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            light: '#1597D5', 
-                            default: '#19476B', 
-                            teal: '#0D9DA5', 
-                            orange: '#EB5435', 
-                            yellow: '#F5A62D', 
-                            pink: '#E71552', 
-                            bg: '#F8FAFC', 
+                            light: '#1597D5',
+                            default: '#19476B',
+                            teal: '#0D9DA5',
+                            orange: '#EB5435',
+                            yellow: '#F5A62D',
+                            pink: '#E71552',
+                            bg: '#F8FAFC',
                         }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] }
@@ -28,7 +28,7 @@
             }
         }
     </script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -63,19 +63,7 @@
                         <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Chamados
                     </a>
-                    <div class="pt-4 pb-1">
-                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
-                    </div>
-                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Usuários
-                    </a>
-                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Logs do Sistema
-                    </a>
                 </nav>
-
 
                 <div class="mt-2">
                     <h3 class="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
@@ -91,6 +79,28 @@
                         </a>
                     </div>
                 </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Configurações</p>
+                    </div>
+                    <a href="configuracoes-ofertas.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="tag" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Ofertas
+                    </a>
+                </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </div>
             </div>
 
             <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
@@ -105,7 +115,7 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-1">
-                        <a href="admin-usuarios.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                        <a href="configuracoes-usuario.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
                             <i data-lucide="settings" class="h-4 w-4"></i>
                         </a>
                         <a href="index.html" class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
@@ -117,7 +127,7 @@
         </aside>
 
         <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
-            
+
             <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
                 <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
                     <div class="flex items-center gap-4">
@@ -126,7 +136,7 @@
                         </a>
                         <h1 class="text-xl font-semibold text-brand-default">Novo Pedido</h1>
                     </div>
-                    
+
                     <div class="flex items-center gap-4">
                         <button class="p-2 text-gray-400 hover:text-brand-default transition-colors relative">
                             <i data-lucide="bell" class="h-6 w-6"></i>
@@ -138,9 +148,10 @@
 
             <main class="flex-1 overflow-y-auto p-4 sm:p-8">
                 <div class="max-w-4xl mx-auto">
-                    
-                    <form action="#" class="space-y-6">
-                        
+
+                    <form id="form-pedido" action="#" class="space-y-6">
+
+                        <!-- Cliente -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                             <div class="p-6 border-b border-gray-50 bg-gray-50/50">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
@@ -148,50 +159,54 @@
                                     Informações do Pedido
                                 </h3>
                             </div>
-                            
+
                             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="md:col-span-2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Cliente *</label>
                                     <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
-                                        <input id="cliente-selecionado" type="text" required readonly placeholder="Selecione um cliente..."
+                                        <input id="cliente-selecionado" type="text" required readonly placeholder="Selecione um cliente no botão ao lado..."
                                             class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-gray-50 text-gray-700">
                                         <button type="button" id="abrir-modal-cliente"
                                             class="px-4 py-2 text-sm font-medium text-white bg-brand-teal rounded-lg hover:bg-brand-light transition-colors">
-                                            Buscar cliente
+                                            Selecionar cliente
                                         </button>
                                     </div>
                                     <input type="hidden" name="cliente" id="cliente-hidden">
                                 </div>
+                            </div>
+                        </div>
 
-                                <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de Produto *</label>
-                                <select id="tipo-produto" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white">
-                                    <option>Móvel</option>
-                                    <option>Fixa</option>
-                                    <option>Internet</option>
-                                    <option>Consultoria</option>
-                                    <option>PBX em Nuvem</option>
-                                </select>
+                        <!-- Itens do Pedido -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50 flex justify-between items-center">
+                                <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                    <i data-lucide="package" class="h-4 w-4"></i>
+                                    Itens do Pedido
+                                </h3>
+                                <button type="button" id="btn-add-item"
+                                    class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-brand-teal rounded-lg hover:bg-brand-light transition-colors">
+                                    <i data-lucide="plus" class="h-4 w-4"></i>
+                                    Adicionar Item
+                                </button>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Tipo de Negociação *</label>
-                                <select id="tipo-negociacao" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white">
-                                </select>
-                            </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">Valor Mensal (R$)</label>
-                                    <input type="text" placeholder="0,00" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal">
+                            <div id="lista-itens" class="p-6 space-y-4">
+                                <div id="placeholder-itens" class="text-center py-8 text-gray-400">
+                                    <i data-lucide="package-open" class="h-10 w-10 mx-auto mb-2 opacity-30"></i>
+                                    <p class="text-sm">Nenhum item adicionado. Clique em "Adicionar Item" para começar.</p>
                                 </div>
+                            </div>
 
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">Previsão de Ativação</label>
-                                    <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal">
+                            <!-- Total -->
+                            <div id="total-container" class="hidden p-6 border-t border-gray-100 bg-gray-50/50">
+                                <div class="flex justify-end items-center gap-4">
+                                    <span class="text-sm font-semibold text-gray-500">Valor Total do Pedido:</span>
+                                    <span id="valor-total" class="text-2xl font-bold text-brand-default">R$ 0,00</span>
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Detalhes Adicionais -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                             <div class="p-6 border-b border-gray-50 bg-gray-50/50">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
@@ -220,7 +235,7 @@
 
             <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
                 <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
-                    Desenvolvido por Hangar Digital 
+                    Desenvolvido por Hangar Digital
                     <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
                 </a>
             </footer>
@@ -228,6 +243,7 @@
         </div>
     </div>
 
+    <!-- Modal buscar cliente -->
     <div id="cliente-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/50" data-modal-overlay></div>
         <div class="relative mx-auto mt-10 w-[90%] max-w-2xl bg-white rounded-xl shadow-xl border border-gray-200">
@@ -251,7 +267,6 @@
                     <datalist id="cliente-sugestoes"></datalist>
                     <p class="mt-1 text-xs text-gray-400">Digite para ver sugestões e filtre a lista automaticamente.</p>
                 </div>
-
                 <div>
                     <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resultados</p>
                     <div id="cliente-resultados" class="max-h-64 overflow-y-auto divide-y divide-gray-100 border border-gray-200 rounded-lg"></div>
@@ -268,41 +283,7 @@
     <script>
         lucide.createIcons();
 
-        const tipoProdutoSelect = document.getElementById('tipo-produto');
-        const tipoNegociacaoSelect = document.getElementById('tipo-negociacao');
-
-        const negociacoesPorProduto = {
-            'Móvel': ['Novo', 'Portado', 'Aditivo', 'Aditivo Portado', 'Renovação'],
-            'Fixa': ['Novo', 'Portado', 'Renovação'],
-            'Internet': ['Novo'],
-            'Consultoria': ['Novo'],
-            'PBX em Nuvem': ['Novo'],
-        };
-
-        const atualizarTipoNegociacao = () => {
-            const opcoes = negociacoesPorProduto[tipoProdutoSelect.value] ?? [];
-            tipoNegociacaoSelect.innerHTML = '';
-
-            const placeholder = document.createElement('option');
-            placeholder.value = '';
-            placeholder.textContent = 'Selecione um tipo de negociação';
-            placeholder.disabled = true;
-            placeholder.selected = true;
-            tipoNegociacaoSelect.appendChild(placeholder);
-
-            opcoes.forEach((negociacao) => {
-                const option = document.createElement('option');
-                option.value = negociacao;
-                option.textContent = negociacao;
-                tipoNegociacaoSelect.appendChild(option);
-            });
-
-            tipoNegociacaoSelect.disabled = opcoes.length === 0;
-        };
-
-        tipoProdutoSelect.addEventListener('change', atualizarTipoNegociacao);
-        atualizarTipoNegociacao();
-
+        // ======== DADOS MOCK ========
         const clientes = [
             { nome: 'Tech Solutions LTDA', documento: '12.345.678/0001-90', segmento: 'Tecnologia' },
             { nome: 'Indústria Alfa', documento: '45.987.321/0001-55', segmento: 'Indústria' },
@@ -312,8 +293,298 @@
             { nome: 'Hospital São Lucas', documento: '21.123.456/0001-77', segmento: 'Saúde' },
         ];
 
+        const negociacoesPorProduto = {
+            'Móvel':        ['Novo', 'Portado', 'Aditivo', 'Aditivo Portado', 'Renovação'],
+            'Fixa':         ['Novo', 'Portado', 'Renovação'],
+            'Internet':     ['Novo'],
+            'Consultoria':  ['Novo'],
+            'PBX em Nuvem': ['Novo'],
+        };
+
+        const operadoras = ['Claro', 'Vivo', 'TIM', 'Oi', 'Algar', 'Nextel'];
+
+        // Ofertas mock: chave = "Produto|Operadora|Negociação"
+        const ofertasMock = {
+            'Móvel|Claro|Novo':            ['Claro Controle 8GB', 'Claro Controle 15GB', 'Claro Pós 25GB'],
+            'Móvel|Claro|Portado':         ['Claro Portabilidade 8GB', 'Claro Portabilidade 15GB'],
+            'Móvel|Vivo|Novo':             ['Vivo Easy 8GB', 'Vivo Controle 12GB', 'Vivo Pós 25GB'],
+            'Móvel|Vivo|Portado':          ['Vivo Portabilidade Controle', 'Vivo Portabilidade Pós'],
+            'Móvel|TIM|Novo':              ['TIM Beta 8GB', 'TIM Beta 15GB', 'TIM Black 30GB'],
+            'Móvel|Oi|Novo':               ['Oi Conta Total 8GB', 'Oi Conta Total 15GB'],
+            'Fixa|Claro|Novo':             ['Claro Voz Ilimitado'],
+            'Fixa|Vivo|Novo':              ['Vivo Fixo Ilimitado'],
+            'Internet|Claro|Novo':         ['Claro 100MB', 'Claro 200MB', 'Claro 500MB', 'Claro 1GB'],
+            'Internet|Vivo|Novo':          ['Vivo Fibra 100MB', 'Vivo Fibra 200MB', 'Vivo Fibra 600MB'],
+            'Internet|TIM|Novo':           ['TIM Live 100MB', 'TIM Live 400MB'],
+            'Consultoria|Claro|Novo':      ['Gestão de Frota', 'Gestão de Mobilidade'],
+            'PBX em Nuvem|Claro|Novo':     ['CPBX 10 Ramais', 'CPBX 25 Ramais', 'CPBX 50 Ramais'],
+        };
+
+        // ======== ITENS DO PEDIDO ========
+        let contadorItens = 0;
+        let totalItens = 0;
+
+        function formatarMoeda(valor) {
+            return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+        }
+
+        function parseMoeda(str) {
+            return parseFloat(str.replace(/[R$\s.]/g, '').replace(',', '.')) || 0;
+        }
+
+        function atualizarTotal() {
+            let soma = 0;
+            document.querySelectorAll('.input-valor-item').forEach(input => {
+                soma += parseMoeda(input.value);
+            });
+            document.getElementById('valor-total').textContent = formatarMoeda(soma);
+
+            const totalContainer = document.getElementById('total-container');
+            const listaItens = document.getElementById('lista-itens');
+            const hasItems = listaItens.querySelectorAll('.item-pedido').length > 0;
+            totalContainer.classList.toggle('hidden', !hasItems);
+        }
+
+        function atualizarNegociacoes(itemEl) {
+            const produto = itemEl.querySelector('.select-produto').value;
+            const selectNegociacao = itemEl.querySelector('.select-negociacao');
+            const opcoes = negociacoesPorProduto[produto] || [];
+
+            selectNegociacao.innerHTML = '<option value="">Selecione...</option>';
+            opcoes.forEach(n => {
+                const opt = document.createElement('option');
+                opt.value = n;
+                opt.textContent = n;
+                selectNegociacao.appendChild(opt);
+            });
+            atualizarOfertas(itemEl);
+        }
+
+        function atualizarOfertas(itemEl) {
+            const produto = itemEl.querySelector('.select-produto').value;
+            const operadora = itemEl.querySelector('.select-operadora').value;
+            const negociacao = itemEl.querySelector('.select-negociacao').value;
+            const selectOferta = itemEl.querySelector('.select-oferta');
+
+            const chave = `${produto}|${operadora}|${negociacao}`;
+            const opcoes = ofertasMock[chave] || [];
+
+            selectOferta.innerHTML = '<option value="">Selecione uma oferta...</option>';
+            if (opcoes.length) {
+                opcoes.forEach(o => {
+                    const opt = document.createElement('option');
+                    opt.value = o;
+                    opt.textContent = o;
+                    selectOferta.appendChild(opt);
+                });
+                selectOferta.disabled = false;
+            } else {
+                if (produto && operadora && negociacao) {
+                    const opt = document.createElement('option');
+                    opt.value = '';
+                    opt.textContent = 'Nenhuma oferta cadastrada para esta combinação';
+                    selectOferta.appendChild(opt);
+                }
+                selectOferta.disabled = true;
+            }
+        }
+
+        function atualizarCamposMovel(itemEl) {
+            const produto = itemEl.querySelector('.select-produto').value;
+            const qtdContainer = itemEl.querySelector('.qtd-linhas-container');
+            const isMovel = produto === 'Móvel';
+            qtdContainer.classList.toggle('hidden', !isMovel);
+            if (!isMovel) {
+                itemEl.querySelector('.linhas-section').classList.add('hidden');
+                itemEl.querySelector('.linhas-lista').innerHTML = '';
+                itemEl.querySelector('.input-qtd-linhas').value = '';
+            }
+            atualizarBotaoLinhas(itemEl);
+        }
+
+        function atualizarBotaoLinhas(itemEl) {
+            const qtd = parseInt(itemEl.querySelector('.input-qtd-linhas').value) || 0;
+            const btnGerar = itemEl.querySelector('.btn-gerar-linhas');
+            btnGerar.disabled = qtd <= 0;
+            btnGerar.classList.toggle('opacity-50', qtd <= 0);
+            btnGerar.classList.toggle('cursor-not-allowed', qtd <= 0);
+        }
+
+        function gerarLinhas(itemEl) {
+            const qtd = parseInt(itemEl.querySelector('.input-qtd-linhas').value) || 0;
+            const linhasSection = itemEl.querySelector('.linhas-section');
+            const linhasLista = itemEl.querySelector('.linhas-lista');
+
+            if (qtd <= 0) return;
+
+            // Preserve existing values
+            const existentes = Array.from(linhasLista.querySelectorAll('.input-numero')).map(i => i.value);
+
+            linhasLista.innerHTML = '';
+            for (let i = 0; i < qtd; i++) {
+                const val = existentes[i] || '';
+                const row = document.createElement('div');
+                row.className = 'flex items-center gap-2';
+                row.innerHTML = `
+                    <span class="text-xs font-medium text-gray-400 w-6 text-right">${i + 1}.</span>
+                    <input type="tel" value="${val}" placeholder="(99) 99999-9999" maxlength="15"
+                        class="input-numero flex-1 px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-1 focus:ring-brand-teal focus:border-brand-teal">
+                `;
+                linhasLista.appendChild(row);
+            }
+
+            // Máscaras
+            linhasLista.querySelectorAll('.input-numero').forEach(input => {
+                input.addEventListener('input', function () {
+                    let v = this.value.replace(/\D/g, '').substring(0, 11);
+                    if (v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+                    else if (v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+                    else if (v.length > 2) v = v.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+                    else v = v.replace(/^(\d*)$/, '($1');
+                    this.value = v;
+                });
+            });
+
+            linhasSection.classList.remove('hidden');
+        }
+
+        function criarItemEl(id) {
+            const div = document.createElement('div');
+            div.className = 'item-pedido border border-gray-200 rounded-xl p-5 bg-white';
+            div.dataset.itemId = id;
+
+            const opOperadoras = operadoras.map(o => `<option value="${o}">${o}</option>`).join('');
+            const opProdutos = Object.keys(negociacoesPorProduto).map(p => `<option value="${p}">${p}</option>`).join('');
+
+            div.innerHTML = `
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm font-bold text-brand-default flex items-center gap-2">
+                        <i data-lucide="package" class="h-4 w-4 text-brand-teal"></i>
+                        Item #${id}
+                    </span>
+                    <button type="button" class="btn-remover-item text-gray-300 hover:text-red-500 transition-colors p-1 rounded" title="Remover item">
+                        <i data-lucide="trash-2" class="h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Tipo de Produto *</label>
+                        <select class="select-produto w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white text-sm">
+                            ${opProdutos}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Operadora *</label>
+                        <select class="select-operadora w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white text-sm">
+                            <option value="">Selecione...</option>
+                            ${opOperadoras}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Tipo de Negociação *</label>
+                        <select class="select-negociacao w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white text-sm">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="sm:col-span-2 lg:col-span-1">
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Oferta *</label>
+                        <select class="select-oferta w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal bg-white text-sm" disabled>
+                            <option value="">Selecione produto e operadora...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Valor do Item (R$) *</label>
+                        <input type="text" placeholder="0,00"
+                            class="input-valor-item w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm">
+                    </div>
+                    <div class="qtd-linhas-container hidden">
+                        <label class="block text-xs font-medium text-gray-600 mb-1">Qtd. de Linhas</label>
+                        <div class="flex gap-2 items-center">
+                            <input type="number" min="0" max="9999" placeholder="0"
+                                class="input-qtd-linhas w-24 px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-teal focus:border-brand-teal text-sm">
+                            <button type="button" disabled
+                                class="btn-gerar-linhas flex items-center gap-1 px-3 py-2 text-xs font-medium text-white bg-brand-light rounded-lg hover:bg-brand-default transition-colors whitespace-nowrap opacity-50 cursor-not-allowed">
+                                <i data-lucide="list" class="h-3.5 w-3.5"></i>
+                                Gerar Linhas
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linhas do Pedido -->
+                <div class="linhas-section hidden mt-4 pt-4 border-t border-gray-100">
+                    <div class="flex items-center justify-between mb-3">
+                        <label class="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
+                            <i data-lucide="phone" class="h-3.5 w-3.5 text-brand-teal"></i>
+                            Linhas do Pedido
+                        </label>
+                        <button type="button" class="btn-fechar-linhas flex items-center gap-1 text-xs text-red-400 hover:text-red-600 hover:underline transition-colors">
+                            <i data-lucide="x" class="h-3 w-3"></i>
+                            Não desejo informar as linhas
+                        </button>
+                    </div>
+                    <div class="linhas-lista grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"></div>
+                </div>
+            `;
+
+            // Events
+            div.querySelector('.btn-remover-item').addEventListener('click', () => {
+                div.remove();
+                const lista = document.getElementById('lista-itens');
+                if (!lista.querySelector('.item-pedido')) {
+                    document.getElementById('placeholder-itens').style.display = '';
+                }
+                atualizarTotal();
+                lucide.createIcons();
+            });
+
+            const selectProduto = div.querySelector('.select-produto');
+            const selectOperadora = div.querySelector('.select-operadora');
+            const selectNegociacao = div.querySelector('.select-negociacao');
+            const inputValor = div.querySelector('.input-valor-item');
+            const inputQtd = div.querySelector('.input-qtd-linhas');
+
+            selectProduto.addEventListener('change', () => { atualizarNegociacoes(div); atualizarCamposMovel(div); });
+            selectOperadora.addEventListener('change', () => { atualizarOfertas(div); });
+            selectNegociacao.addEventListener('change', () => { atualizarOfertas(div); });
+
+            inputValor.addEventListener('input', function () {
+                let v = this.value.replace(/[^0-9,]/g, '');
+                this.value = v;
+                atualizarTotal();
+            });
+
+            inputQtd.addEventListener('input', () => atualizarBotaoLinhas(div));
+
+            div.querySelector('.btn-gerar-linhas').addEventListener('click', () => gerarLinhas(div));
+
+            div.querySelector('.btn-fechar-linhas').addEventListener('click', () => {
+                div.querySelector('.linhas-section').classList.add('hidden');
+                div.querySelector('.linhas-lista').innerHTML = '';
+            });
+
+            // Init negociações e campos Móvel
+            atualizarNegociacoes(div);
+            atualizarCamposMovel(div);
+
+            return div;
+        }
+
+        document.getElementById('btn-add-item').addEventListener('click', () => {
+            contadorItens++;
+            const placeholder = document.getElementById('placeholder-itens');
+            placeholder.style.display = 'none';
+
+            const lista = document.getElementById('lista-itens');
+            const itemEl = criarItemEl(contadorItens);
+            lista.appendChild(itemEl);
+            lucide.createIcons();
+            atualizarTotal();
+        });
+
+        // ======== MODAL CLIENTE ========
         const modal = document.getElementById('cliente-modal');
-        const abrirModal = document.getElementById('abrir-modal-cliente');
         const overlay = modal.querySelector('[data-modal-overlay]');
         const fecharBotoes = modal.querySelectorAll('[data-close-modal]');
         const inputPesquisa = document.getElementById('cliente-pesquisa');
@@ -324,49 +595,40 @@
 
         const montarSugestoes = () => {
             datalistSugestoes.innerHTML = '';
-            clientes.forEach((cliente) => {
-                const option = document.createElement('option');
-                option.value = cliente.nome;
-                datalistSugestoes.appendChild(option);
+            clientes.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c.nome;
+                datalistSugestoes.appendChild(opt);
             });
         };
 
         const montarResultados = (filtro = '') => {
             const termo = filtro.trim().toLowerCase();
-            const filtrados = clientes.filter((cliente) => {
-                return (
-                    cliente.nome.toLowerCase().includes(termo) ||
-                    cliente.documento.toLowerCase().includes(termo) ||
-                    cliente.segmento.toLowerCase().includes(termo)
-                );
-            });
-
+            const filtrados = clientes.filter(c =>
+                c.nome.toLowerCase().includes(termo) ||
+                c.documento.toLowerCase().includes(termo) ||
+                c.segmento.toLowerCase().includes(termo)
+            );
             listaResultados.innerHTML = '';
-
             if (!filtrados.length) {
-                const vazio = document.createElement('div');
-                vazio.className = 'px-4 py-3 text-sm text-gray-500';
-                vazio.textContent = 'Nenhum cliente encontrado.';
-                listaResultados.appendChild(vazio);
+                listaResultados.innerHTML = '<div class="px-4 py-3 text-sm text-gray-500">Nenhum cliente encontrado.</div>';
                 return;
             }
-
-            filtrados.forEach((cliente) => {
+            filtrados.forEach(c => {
                 const item = document.createElement('button');
                 item.type = 'button';
                 item.className = 'w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors';
                 item.innerHTML = `
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-sm font-semibold text-gray-700">${cliente.nome}</p>
-                            <p class="text-xs text-gray-400">${cliente.documento} • ${cliente.segmento}</p>
+                            <p class="text-sm font-semibold text-gray-700">${c.nome}</p>
+                            <p class="text-xs text-gray-400">${c.documento} • ${c.segmento}</p>
                         </div>
                         <span class="text-xs font-medium text-brand-teal">Selecionar</span>
-                    </div>
-                `;
+                    </div>`;
                 item.addEventListener('click', () => {
-                    clienteSelecionado.value = cliente.nome;
-                    clienteHidden.value = cliente.nome;
+                    clienteSelecionado.value = c.nome;
+                    clienteHidden.value = c.nome;
                     fecharModal();
                 });
                 listaResultados.appendChild(item);
@@ -386,16 +648,13 @@
             document.body.classList.remove('overflow-hidden');
         };
 
-        abrirModal.addEventListener('click', abrirModalCliente);
+        document.getElementById('abrir-modal-cliente').addEventListener('click', abrirModalCliente);
         overlay.addEventListener('click', fecharModal);
-        fecharBotoes.forEach((botao) => botao.addEventListener('click', fecharModal));
-        inputPesquisa.addEventListener('input', (event) => montarResultados(event.target.value));
-        inputPesquisa.addEventListener('change', (event) => montarResultados(event.target.value));
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-                fecharModal();
-            }
+        fecharBotoes.forEach(b => b.addEventListener('click', fecharModal));
+        inputPesquisa.addEventListener('input', e => montarResultados(e.target.value));
+        inputPesquisa.addEventListener('change', e => montarResultados(e.target.value));
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) fecharModal();
         });
 
         montarSugestoes();

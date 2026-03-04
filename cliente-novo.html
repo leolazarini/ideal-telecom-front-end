@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Cliente - Ideal Telecom</title>
-    
+
     <link rel="icon" href="img/favicon-idealtelecom.svg" sizes="32x32">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            light: '#1597D5', 
-                            default: '#19476B', 
-                            teal: '#0D9DA5', 
-                            orange: '#EB5435', 
-                            yellow: '#F5A62D', 
-                            pink: '#E71552', 
-                            bg: '#F8FAFC', 
+                            light: '#1597D5',
+                            default: '#19476B',
+                            teal: '#0D9DA5',
+                            orange: '#EB5435',
+                            yellow: '#F5A62D',
+                            pink: '#E71552',
+                            bg: '#F8FAFC',
                         }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] }
@@ -28,7 +28,7 @@
             }
         }
     </script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -63,19 +63,7 @@
                         <i data-lucide="message-circle-question-mark" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
                         Chamados
                     </a>
-                    <div class="pt-4 pb-1">
-                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
-                    </div>
-                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Usuários
-                    </a>
-                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
-                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
-                        Logs do Sistema
-                    </a>
                 </nav>
-
 
                 <div class="mt-2">
                     <h3 class="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Relatórios</h3>
@@ -91,6 +79,28 @@
                         </a>
                     </div>
                 </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Configurações</p>
+                    </div>
+                    <a href="configuracoes-ofertas.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="tag" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Ofertas
+                    </a>
+                </div>
+                <div class="mt-2 space-y-1">
+                    <div class="pt-2 pb-1">
+                        <p class="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Administração</p>
+                    </div>
+                    <a href="usuarios-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="users-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Usuários
+                    </a>
+                    <a href="logs-lista.html" class="text-gray-300 hover:bg-white/5 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors">
+                        <i data-lucide="shield-check" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                        Logs do Sistema
+                    </a>
+                </div>
             </div>
 
             <div class="border-t border-white/10 p-4 bg-brand-default flex-shrink-0">
@@ -105,7 +115,7 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-1">
-                        <a href="admin-usuarios.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
+                        <a href="configuracoes-usuario.html" class="text-gray-400 hover:text-white hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Configurações">
                             <i data-lucide="settings" class="h-4 w-4"></i>
                         </a>
                         <a href="index.html" class="text-gray-400 hover:text-brand-orange hover:bg-white/10 p-1.5 rounded-full transition-colors" title="Sair">
@@ -117,7 +127,7 @@
         </aside>
 
         <div class="flex-1 flex flex-col min-w-0 bg-slate-50">
-            
+
             <header class="bg-white shadow-sm z-10 sticky top-0 flex-shrink-0">
                 <div class="px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
                     <div class="flex items-center gap-4">
@@ -126,7 +136,7 @@
                         </a>
                         <h1 class="text-xl font-semibold text-brand-default">Novo Cliente</h1>
                     </div>
-                    
+
                     <div class="flex items-center gap-4">
                         <div class="h-6 w-px bg-gray-200"></div>
                         <button class="p-2 text-gray-400 hover:text-brand-default transition-colors relative">
@@ -139,9 +149,10 @@
 
             <main class="flex-1 overflow-y-auto p-4 sm:p-8">
                 <div class="max-w-4xl mx-auto">
-                    
+
                     <form action="#" class="space-y-6">
 
+                        <!-- Vendedor Responsável -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                             <div class="p-6 border-b border-gray-50 bg-gray-50/50">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
@@ -149,8 +160,8 @@
                                     Vendedor Responsável
                                 </h3>
                             </div>
-                            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="md:col-span-2">
+                            <div class="p-6">
+                                <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Vendedor Responsável *</label>
                                     <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
                                         <input id="vendedor-selecionado" type="text" required readonly placeholder="Selecione um vendedor..."
@@ -165,82 +176,147 @@
                             </div>
                         </div>
 
+                        <!-- Dados da Empresa -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50 flex justify-between items-center">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
                                     <i data-lucide="building" class="h-4 w-4"></i>
                                     Dados da Empresa
                                 </h3>
+                                <span id="cnpj-status" class="hidden text-xs font-medium flex items-center gap-1"></span>
                             </div>
                             <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="md:col-span-2">
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">Razão Social *</label>
-                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
-                                </div>
 
+                                <!-- CNPJ com busca por botão -->
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">CNPJ *</label>
-                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <div class="flex gap-2">
+                                        <div class="relative flex-1">
+                                            <input id="cnpj" type="text" required maxlength="18" placeholder="00.000.000/0000-00"
+                                                class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                            <div id="cnpj-spinner" class="hidden absolute right-3 top-2.5">
+                                                <i data-lucide="loader-2" class="h-4 w-4 text-brand-light animate-spin"></i>
+                                            </div>
+                                            <div id="cnpj-ok" class="hidden absolute right-3 top-2.5">
+                                                <i data-lucide="check-circle" class="h-4 w-4 text-green-500"></i>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="btn-buscar-cnpj" class="px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-500 flex-shrink-0" title="Buscar dados do CNPJ">
+                                            <i data-lucide="search" class="h-4 w-4"></i>
+                                        </button>
+                                    </div>
+                                    <p class="text-[11px] text-gray-400 mt-1">Informe o CNPJ e clique na lupa para preencher os dados automaticamente.</p>
                                 </div>
 
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Inscrição Estadual</label>
-                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <input id="ie" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Razão Social *</label>
+                                    <input id="razao-social" type="text" required placeholder="Preenchido automaticamente pelo CNPJ"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Fantasia</label>
+                                    <input id="nome-fantasia" type="text"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Endereço</label>
-                                    <input type="text" placeholder="Rua, Número, Bairro, Cidade..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <input id="endereco" type="text" placeholder="Rua, Número, Complemento, Bairro"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Cidade / UF</label>
+                                    <input id="cidade-uf" type="text" placeholder="Joinville / SC"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">CEP</label>
+                                    <input id="cep" type="text" placeholder="00000-000"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
 
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <input id="empresa-email" type="email"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
 
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                                    <input type="text" placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <input id="empresa-telefone" type="text" placeholder="(99) 99999-9999"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
 
                             </div>
                         </div>
 
+                        <!-- Representante Legal -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                             <div class="p-6 border-b border-gray-50 bg-gray-50/50">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
-                                    <i data-lucide="contact" class="h-4 w-4"></i>
-                                    Dados do Representante
+                                    <i data-lucide="badge-check" class="h-4 w-4"></i>
+                                    Representante Legal
                                 </h3>
+                                <p class="text-xs text-gray-400 mt-1">Responsável legal pela empresa perante a Ideal Telecom. Informações completas obrigatórias.</p>
                             </div>
-                            <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">CPF</label>
-                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo *</label>
+                                    <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
-
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">CPF *</label>
+                                    <input type="text" required maxlength="14" placeholder="000.000.000-00"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">RG</label>
                                     <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
-
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
                                     <input type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Cargo / Função</label>
+                                    <input type="text" placeholder="Ex: Sócio-Administrador" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail *</label>
+                                    <input type="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone / Celular *</label>
+                                    <input type="text" required placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Endereço Residencial</label>
+                                    <input type="text" placeholder="Rua, Número, Complemento, Bairro, Cidade/UF"
+                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Administrador do Contrato -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div class="p-6 border-b border-gray-50 bg-gray-50/50">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50 flex items-center justify-between">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
                                     <i data-lucide="file-user" class="h-4 w-4"></i>
                                     Administrador do Contrato
                                 </h3>
+                                <span class="text-xs font-medium text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Preenchimento opcional</span>
                             </div>
                             <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                                <div class="md:col-span-3">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
                                     <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
                                 <div>
@@ -249,11 +325,64 @@
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                    <input type="text" placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                                    <input type="text" placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
                                 </div>
                             </div>
                         </div>
 
+                        <!-- Autorizado a Receber -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50 flex items-center justify-between">
+                                <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                    <i data-lucide="hand-coins" class="h-4 w-4"></i>
+                                    Autorizado a Receber
+                                </h3>
+                                <span class="text-xs font-medium text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Preenchimento opcional</span>
+                            </div>
+                            <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="md:col-span-3">
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                                    <input type="text" placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp</label>
+                                    <input type="text" placeholder="(99) 99999-9999" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Logins e Senhas -->
+                        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <div class="p-6 border-b border-gray-50 bg-gray-50/50 flex items-center justify-between">
+                                <h3 class="font-bold text-brand-default flex items-center gap-2">
+                                    <i data-lucide="key-round" class="h-4 w-4"></i>
+                                    Logins e Senhas
+                                </h3>
+                                <span class="text-xs font-medium text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Preenchimento opcional</span>
+                            </div>
+                            <div class="p-6">
+                                <div id="lista-logins" class="space-y-3 mb-4"></div>
+                                <button type="button" id="btn-add-login"
+                                    class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-brand-default border border-brand-default rounded-lg hover:bg-brand-default hover:text-white transition-colors">
+                                    <i data-lucide="plus" class="h-4 w-4"></i>
+                                    Adicionar login e senha
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Detalhes Adicionais -->
                         <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                             <div class="p-6 border-b border-gray-50 bg-gray-50/50">
                                 <h3 class="font-bold text-brand-default flex items-center gap-2">
@@ -280,7 +409,7 @@
 
             <footer class="bg-slate-50 py-3 px-8 flex justify-end items-center flex-shrink-0">
                 <a href="https://hangar.digital/" target="_blank" class="group flex items-center gap-2 text-[11px] font-semibold text-gray-400 hover:text-black transition-colors uppercase tracking-wider">
-                    Desenvolvido por Hangar Digital 
+                    Desenvolvido por Hangar Digital
                     <img src="img/logo-hangar.svg" alt="Hangar" class="h-4 w-4 opacity-60 group-hover:opacity-100 transition-opacity">
                 </a>
             </footer>
@@ -288,6 +417,7 @@
         </div>
     </div>
 
+    <!-- Modal buscar vendedor -->
     <div id="vendedor-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/50" data-modal-overlay></div>
         <div class="relative mx-auto mt-10 w-[90%] max-w-2xl bg-white rounded-xl shadow-xl border border-gray-200">
@@ -309,9 +439,7 @@
                         <i data-lucide="search" class="absolute right-3 top-2.5 h-4 w-4 text-gray-400"></i>
                     </div>
                     <datalist id="vendedor-sugestoes"></datalist>
-                    <p class="mt-1 text-xs text-gray-400">Filtre por nome, documento ou área.</p>
                 </div>
-
                 <div>
                     <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Resultados</p>
                     <div id="vendedor-resultados" class="max-h-64 overflow-y-auto divide-y divide-gray-100 border border-gray-200 rounded-lg"></div>
@@ -328,81 +456,201 @@
     <script>
         lucide.createIcons();
 
-        const vendedores = [
-            { nome: 'Rafael Lima', documento: 'CRE 12345', area: 'Corp' },
-            { nome: 'Marina Costa', documento: 'CRE 54321', area: 'Varejo' },
-            { nome: 'Thiago Medeiros', documento: 'CRE 98765', area: 'Operadoras' },
-            { nome: 'Bruna Duarte', documento: 'CRE 45678', area: 'SMB' },
-            { nome: 'Luís Albuquerque', documento: 'CRE 11223', area: 'Saúde' },
-        ];
+        // ======== CNPJ AUTO-FILL (ReceitaWS) ========
+        const RECEITAWS_TOKEN = 'd239ee8d08f06f7b15ba4ac8aa62808ba475fe7bd199696951f96d1ec04c17fe';
 
-        const vendedorModal = document.getElementById('vendedor-modal');
-        const abrirModalVendedor = document.getElementById('abrir-modal-vendedor');
-        const overlayVendedor = vendedorModal.querySelector('[data-modal-overlay]');
-        const fecharBotoesVendedor = vendedorModal.querySelectorAll('[data-close-modal]');
-        const inputVendedorPesquisa = document.getElementById('vendedor-pesquisa');
-        const listaVendedorResultados = document.getElementById('vendedor-resultados');
-        const datalistVendedorSugestoes = document.getElementById('vendedor-sugestoes');
-        const vendedorSelecionado = document.getElementById('vendedor-selecionado');
-        const vendedorHidden = document.getElementById('vendedor-hidden');
+        const cnpjInput = document.getElementById('cnpj');
 
-        const montarSugestoesVendedores = () => {
-            datalistVendedorSugestoes.innerHTML = '';
-            vendedores.forEach((vendedor) => {
-                const option = document.createElement('option');
-                option.value = vendedor.nome;
-                datalistVendedorSugestoes.appendChild(option);
-            });
-        };
+        function mascararCNPJ(v) {
+            v = v.replace(/\D/g, '').substring(0, 14);
+            v = v.replace(/^(\d{2})(\d)/, '$1.$2');
+            v = v.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+            v = v.replace(/\.(\d{3})(\d)/, '.$1/$2');
+            v = v.replace(/(\d{4})(\d)/, '$1-$2');
+            return v;
+        }
 
-        const montarResultadosVendedores = (filtro = '') => {
-            const termo = filtro.trim().toLowerCase();
-            const filtrados = vendedores.filter((vendedor) => {
-                return (
-                    vendedor.nome.toLowerCase().includes(termo) ||
-                    vendedor.documento.toLowerCase().includes(termo) ||
-                    vendedor.area.toLowerCase().includes(termo)
-                );
-            });
+        cnpjInput.addEventListener('input', function () {
+            this.value = mascararCNPJ(this.value);
+        });
 
-            listaVendedorResultados.innerHTML = '';
-
-            if (!filtrados.length) {
-                const vazio = document.createElement('div');
-                vazio.className = 'px-4 py-3 text-sm text-gray-500';
-                vazio.textContent = 'Nenhum vendedor encontrado.';
-                listaVendedorResultados.appendChild(vazio);
+        async function buscarCNPJ() {
+            const cnpjLimpo = cnpjInput.value.replace(/\D/g, '');
+            if (cnpjLimpo.length !== 14) {
+                alert('Informe um CNPJ válido com 14 dígitos.');
                 return;
             }
 
-            filtrados.forEach((vendedor) => {
+            const spinner = document.getElementById('cnpj-spinner');
+            const okIcon = document.getElementById('cnpj-ok');
+            const statusEl = document.getElementById('cnpj-status');
+
+            spinner.classList.remove('hidden');
+            okIcon.classList.add('hidden');
+            statusEl.classList.add('hidden');
+            document.getElementById('btn-buscar-cnpj').disabled = true;
+
+            try {
+                const resp = await fetch(
+                    `https://receitaws.com.br/v1/cnpj/${cnpjLimpo}?token=${RECEITAWS_TOKEN}`,
+                    { method: 'GET' }
+                );
+                const data = await resp.json();
+
+                spinner.classList.add('hidden');
+                document.getElementById('btn-buscar-cnpj').disabled = false;
+
+                if (data.status === 'ERROR' || data.message) {
+                    statusEl.textContent = data.message || 'CNPJ não encontrado.';
+                    statusEl.className = 'text-xs font-medium text-red-500 flex items-center gap-1';
+                    statusEl.classList.remove('hidden');
+                    return;
+                }
+
+                // Preenche campos
+                document.getElementById('razao-social').value  = data.nome   || '';
+                document.getElementById('nome-fantasia').value = data.fantasia || '';
+                document.getElementById('empresa-email').value = data.email   || '';
+                document.getElementById('empresa-telefone').value = data.telefone || '';
+                document.getElementById('cep').value = data.cep || '';
+
+                const enderecoParts = [
+                    data.logradouro, data.numero,
+                    data.complemento, data.bairro
+                ].filter(Boolean).join(', ');
+                document.getElementById('endereco').value = enderecoParts;
+
+                const cidadeUF = [data.municipio, data.uf].filter(Boolean).join(' / ');
+                document.getElementById('cidade-uf').value = cidadeUF;
+
+                okIcon.classList.remove('hidden');
+                statusEl.textContent = 'Dados preenchidos automaticamente';
+                statusEl.className = 'text-xs font-medium text-green-600 flex items-center gap-1';
+                statusEl.classList.remove('hidden');
+                lucide.createIcons();
+
+            } catch (e) {
+                spinner.classList.add('hidden');
+                document.getElementById('btn-buscar-cnpj').disabled = false;
+                statusEl.textContent = 'Erro ao consultar CNPJ. Preencha manualmente.';
+                statusEl.className = 'text-xs font-medium text-yellow-600 flex items-center gap-1';
+                statusEl.classList.remove('hidden');
+            }
+        }
+
+        document.getElementById('btn-buscar-cnpj').addEventListener('click', buscarCNPJ);
+        cnpjInput.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); buscarCNPJ(); } });
+
+        // ======== LOGINS E SENHAS ========
+        document.getElementById('btn-add-login').addEventListener('click', () => {
+            const lista = document.getElementById('lista-logins');
+            const row = document.createElement('div');
+            row.className = 'login-row grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200';
+            row.innerHTML = `
+                <div>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">Operadora</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light bg-white text-sm">
+                        <option value="">Selecione...</option>
+                        <option>Claro</option><option>Vivo</option><option>TIM</option>
+                        <option>Oi</option><option>Algar</option><option>Nextel</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">Login / Usuário</label>
+                    <input type="text" placeholder="usuario@operadora.com" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">Senha</label>
+                    <div class="flex gap-2">
+                        <div class="relative flex-1">
+                            <input type="password" placeholder="••••••••" class="input-senha w-full px-3 py-2 pr-9 border border-gray-300 rounded-lg focus:ring-1 focus:ring-brand-light focus:border-brand-light text-sm">
+                            <button type="button" class="btn-toggle-senha absolute right-2 top-2.5 text-gray-400 hover:text-gray-600">
+                                <i data-lucide="eye" class="h-4 w-4"></i>
+                            </button>
+                        </div>
+                        <button type="button" class="btn-remover-login flex-shrink-0 text-gray-300 hover:text-red-500 transition-colors p-2 rounded-lg border border-gray-200 hover:border-red-200" title="Remover">
+                            <i data-lucide="trash-2" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                </div>`;
+            row.querySelector('.btn-toggle-senha').addEventListener('click', function () {
+                const input = row.querySelector('.input-senha');
+                const isText = input.type === 'text';
+                input.type = isText ? 'password' : 'text';
+                this.querySelector('i').setAttribute('data-lucide', isText ? 'eye' : 'eye-off');
+                lucide.createIcons();
+            });
+            row.querySelector('.btn-remover-login').addEventListener('click', () => row.remove());
+            lista.appendChild(row);
+            lucide.createIcons();
+        });
+
+        // ======== MODAL VENDEDOR ========
+        const vendedores = [
+            { nome: 'Rafael Lima',      documento: 'CRE 12345', area: 'Corp' },
+            { nome: 'Marina Costa',     documento: 'CRE 54321', area: 'Varejo' },
+            { nome: 'Thiago Medeiros',  documento: 'CRE 98765', area: 'Operadoras' },
+            { nome: 'Bruna Duarte',     documento: 'CRE 45678', area: 'SMB' },
+            { nome: 'Luís Albuquerque', documento: 'CRE 11223', area: 'Saúde' },
+        ];
+
+        const vendedorModal      = document.getElementById('vendedor-modal');
+        const overlay            = vendedorModal.querySelector('[data-modal-overlay]');
+        const fecharBotoes       = vendedorModal.querySelectorAll('[data-close-modal]');
+        const inputPesquisa      = document.getElementById('vendedor-pesquisa');
+        const listaResultados    = document.getElementById('vendedor-resultados');
+        const datalistSugestoes  = document.getElementById('vendedor-sugestoes');
+        const vendedorSelecionado = document.getElementById('vendedor-selecionado');
+        const vendedorHidden     = document.getElementById('vendedor-hidden');
+
+        const montarSugestoes = () => {
+            datalistSugestoes.innerHTML = '';
+            vendedores.forEach(v => {
+                const opt = document.createElement('option');
+                opt.value = v.nome;
+                datalistSugestoes.appendChild(opt);
+            });
+        };
+
+        const montarResultados = (filtro = '') => {
+            const termo = filtro.trim().toLowerCase();
+            const filtrados = vendedores.filter(v =>
+                v.nome.toLowerCase().includes(termo) ||
+                v.documento.toLowerCase().includes(termo) ||
+                v.area.toLowerCase().includes(termo)
+            );
+            listaResultados.innerHTML = '';
+            if (!filtrados.length) {
+                listaResultados.innerHTML = '<div class="px-4 py-3 text-sm text-gray-500">Nenhum vendedor encontrado.</div>';
+                return;
+            }
+            filtrados.forEach(v => {
                 const item = document.createElement('button');
                 item.type = 'button';
                 item.className = 'w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors';
                 item.innerHTML = `
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-sm font-semibold text-gray-700">${vendedor.nome}</p>
-                            <p class="text-xs text-gray-400">${vendedor.documento} • ${vendedor.area}</p>
+                            <p class="text-sm font-semibold text-gray-700">${v.nome}</p>
+                            <p class="text-xs text-gray-400">${v.documento} • ${v.area}</p>
                         </div>
                         <span class="text-xs font-medium text-brand-teal">Selecionar</span>
-                    </div>
-                `;
+                    </div>`;
                 item.addEventListener('click', () => {
-                    vendedorSelecionado.value = vendedor.nome;
-                    vendedorHidden.value = vendedor.nome;
+                    vendedorSelecionado.value = v.nome;
+                    vendedorHidden.value = v.nome;
                     fecharVendedorModal();
                 });
-                listaVendedorResultados.appendChild(item);
+                listaResultados.appendChild(item);
             });
         };
 
         const abrirVendedorModal = () => {
             vendedorModal.classList.remove('hidden');
             document.body.classList.add('overflow-hidden');
-            inputVendedorPesquisa.value = '';
-            montarResultadosVendedores('');
-            setTimeout(() => inputVendedorPesquisa.focus(), 100);
+            inputPesquisa.value = '';
+            montarResultados('');
+            setTimeout(() => inputPesquisa.focus(), 100);
         };
 
         const fecharVendedorModal = () => {
@@ -410,20 +658,17 @@
             document.body.classList.remove('overflow-hidden');
         };
 
-        abrirModalVendedor.addEventListener('click', abrirVendedorModal);
-        overlayVendedor.addEventListener('click', fecharVendedorModal);
-        fecharBotoesVendedor.forEach((botao) => botao.addEventListener('click', fecharVendedorModal));
-        inputVendedorPesquisa.addEventListener('input', (event) => montarResultadosVendedores(event.target.value));
-        inputVendedorPesquisa.addEventListener('change', (event) => montarResultadosVendedores(event.target.value));
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && !vendedorModal.classList.contains('hidden')) {
-                fecharVendedorModal();
-            }
+        document.getElementById('abrir-modal-vendedor').addEventListener('click', abrirVendedorModal);
+        overlay.addEventListener('click', fecharVendedorModal);
+        fecharBotoes.forEach(b => b.addEventListener('click', fecharVendedorModal));
+        inputPesquisa.addEventListener('input', e => montarResultados(e.target.value));
+        inputPesquisa.addEventListener('change', e => montarResultados(e.target.value));
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && !vendedorModal.classList.contains('hidden')) fecharVendedorModal();
         });
 
-        montarSugestoesVendedores();
-        montarResultadosVendedores('');
+        montarSugestoes();
+        montarResultados('');
     </script>
 </body>
 </html>
